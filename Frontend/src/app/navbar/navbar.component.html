@@ -1,0 +1,35 @@
+<div>
+  <nav>
+    <a>
+      <h1>Navbar</h1>
+    </a>
+ 
+    <div *ngIf="log">
+      <!-- TODO hacer que el log revise si hay algún valor en usuario registrado -->
+      <form>
+        <button>
+          <a [routerLink]="['/login']" class="nav-link"> Login </a>
+        </button>
+
+
+        <button>
+          <a [routerLink]="['/register']" class="nav-link">
+            Register
+          </a>
+        </button>
+      </form>
+    </div>
+ 
+ 
+    <div *ngIf="!log">
+      <form>
+        <button>
+          <a [routerLink]="['/user']" class="nav-link">
+            Tu Cuenta
+          </a>
+        </button>
+      </form>
+
+    </div>
+  </nav>
+</div>
