@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ChangeInfoComponent } from './change-info/change-info.component';
+import { GameCardButtonComponent } from './game-card-button/game-card-button.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ChangeInfoComponent } from './change-info/change-info.component';
     NavbarComponent,
     LoginComponent,
     UserPanelComponent,
-    ChangeInfoComponent
+    ChangeInfoComponent,
+    GameCardButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,42 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+ *, *:before, *:after {
+	 box-sizing: border-box;
+}
+ .slide-container {
+	 width: 600px;
+}
+ .card {
+	 background: white;
+	 width: 300px;
+	 display: inline-block;
+	 margin: auto;
+	 border-radius: 19px;
+	 position: relative;
+	 text-align: center;
+	 box-shadow: -1px 15px 30px -12px black;
+	 z-index: 9999;
+}
+ .card__image {
+	 position: relative;
+	 height: 230px;
+	 margin-bottom: 35px;
+	 border-top-left-radius: 14px;
+	 border-top-right-radius: 14px;
+}
+ .card__unit-name {
+    font-family: 'Permanent Marker', cursive;
+	 font-size: 30px;
+}
+
+ .card__image {
+	 background: url('https://imgs.search.brave.com/kEUdx-VW5WT7RDeeCbMgVAT6sX4lsqgHajSc60zl4uY/rs:fit:1200:1200:1/g:ce/aHR0cDovL2Nkbi53/YWxscGFwZXJzYWZh/cmkuY29tLzk0LzMv/WTdWNGwwLmpwZw');
+}
+
+ .card__image img {
+	 width: 350px;
+	 position: absolute;
+	 top: -85px;
+	 left: -25px;
+}
