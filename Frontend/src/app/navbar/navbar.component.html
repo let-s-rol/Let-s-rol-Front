@@ -1,35 +1,57 @@
-<div>
-  <nav>
-    <a>
-      <h1>Navbar</h1>
-    </a>
+<div id  = navbar_container>
+  
+  <nav class="navbar bg-dark" data-bs-theme="dark">
+
+  <!--  NOMBRE DE LA EMPRESA/WEB EN LA NAVBAR -->
+    
+      <h1>Let's Rol</h1>
+    
  
-    <div *ngIf="log">
+    <div *ngIf="log" class = "button_container">
       <!-- TODO hacer que el log revise si hay algún valor en usuario registrado -->
-      <form>
-        <button>
+       
+      <!--  BOTÓN DE LOGIN -->
+      <button >
           <a [routerLink]="['/login']" class="nav-link"> Login </a>
-        </button>
+      </button> 
 
-
-        <button>
+      <!--  BOTÓN DE REGISTRO -->
+      <button>
           <a [routerLink]="['/register']" class="nav-link">
-            Register
+            Registrarse
           </a>
-        </button>
-      </form>
+      </button>
+
+      <!--  BOTÓN DE ¿QUE ES LET'S ROL? -->
+      <button >  
+            ¿Qué es Let's Rol?
+      </button>
+
+      <!--  BOTÓN DE CONTACTO -->
+      <button >  
+          Contacto
+      </button>
+
+      <!--  BOTÓN DE TIENDA -->
+      <button >  
+        Tienda
+    </button>
+
     </div>
  
+    <!--  ESTE BOTÓN SOLO SE MUESTRA SI ESTÁS LOGUEADO -->
  
     <div *ngIf="!log">
-      <form>
         <button>
           <a [routerLink]="['/user']" class="nav-link">
             Tu Cuenta
           </a>
         </button>
-      </form>
 
     </div>
+
   </nav>
+  
 </div>
+
+  

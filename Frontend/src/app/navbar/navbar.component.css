@@ -1,0 +1,46 @@
+#navbar_container {
+
+    width: 100%;
+    height: 130px;
+    background-color:rgba(64, 64, 64, 1);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+
+    float: left;
+    color: aliceblue;
+    font-size: 48px;
+}
+
+.button_container {
+   
+
+    float: right;
+    width: 50%;
+    
+
+}
+
+ button {
+
+    font-size: 36px;
+    padding: 4% 3%;
+    background-color: rgba(64, 64, 64, 1);
+    color:aliceblue;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    line-height: 44px;
+    
+
+
+}
+
+a { color: inherit; 
+    text-decoration: none;} 
+
+    
