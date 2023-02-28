@@ -288,7 +288,7 @@ h6 span {
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
 }
 .btn:hover {
-  background-color: var(--card-bg-color);
+  background-color:rgba(0, 0, 0, 0);
   border: solid 1px #ffeba7;
   color: var(--secondary-color);
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
