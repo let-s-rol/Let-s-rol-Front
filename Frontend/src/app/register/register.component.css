@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 @import url("https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.css");
+@import url("https://cdn.bootcdn.net/ajax/libs/font-awesome/5.4.0/css/all.css");
 
 :host {
   --main-bg-color: #1f2029;
@@ -88,8 +89,6 @@ h6 span {
   color: var(--secondary-color);
   background-color: var(--card-bg-color);
   font-family: "Manrope", sans-serif;
-  /*TODO: Mirar de cambiar el content para poner una flecha*/
-  /* content: "->"; */
   z-index: 20;
   top: -10px;
   left: -10px;
@@ -98,13 +97,15 @@ h6 span {
   font-size: 24px;
   transition: all 0.5s ease;
 
-  /* font awesome */
-  font-family: "Font Awesome 6 Free";
-  content: "\f057";
-
+  content: "";
+  background-image: url("dice-d20-solid.svg");
+  background-size: 23px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--main-color);
 }
 .checkbox:checked + label:before {
-  transform: translateX(44px) rotate(-900deg);
+  transform: translateX(44px) rotate(-999deg);
 }
 
 .card-3d-wrap {
@@ -291,6 +292,9 @@ h6 span {
   border: solid 1px #ffeba7;
   color: var(--secondary-color);
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, 0.2);
+}
+.disable {
+  background-color: var(--main-bg-color);
 }
 
 .logo {
