@@ -13,6 +13,8 @@ import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ChangeInfoComponent } from './change-info/change-info.component';
 import { StudentMenuComponent } from './student-menu/student-menu.component';
 import { GameCardButtonComponent } from './game-card-button/game-card-button.component';
+import { NavLinksComponent } from './nav-links/nav-links.component';
+import { AbautUSComponent } from './abaut-us/abaut-us.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { GameCardButtonComponent } from './game-card-button/game-card-button.com
     UserPanelComponent,
     ChangeInfoComponent,
     StudentMenuComponent,
-    GameCardButtonComponent
+    GameCardButtonComponent,
+    NavLinksComponent,
+    AbautUSComponent
   ],
   imports: [
     BrowserModule,

@@ -1,35 +1,34 @@
-<div class="container">
-  <nav class="rounded navbar navbar-dark bg-dark justify-content-between">
-    <a class="navbar-brand">
-      <h1 class="m-3">Navbar</h1>
+<div class="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3">
+  <div class="container-xl">
+    <!-- Logo -->
+    <a class="navbar-brand" [routerLink]="['']">
+      <img src="../../assets/logo/logo.png " class="logo" alt="Let's rol" />
     </a>
- 
-    <div *ngIf="log">
-      <!-- TODO hacer que el log revise si hay algún valor en usuario registrado -->
-      <form class="form-inline">
-        <button class="btn btn-outline-secondary my-2 my-sm-0">
-          <a [routerLink]="['/login']" class="nav-link"> Login </a>
-        </button>
+    <!-- Navbar toggle -->  
+    <button
+      class="navbar-toggler"
+      type="button" 
+      data-bs-toggle="collapse"
+      data-bs-target="navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <!-- Nav -->
+      <nav class="navbar-nav mx-lg-auto nav-hover">
+        <!-- TODO mirar como saber en que pagina estamos para poner active -->
+        <app-nav-links></app-nav-links>
+      </nav>
 
-
-        <button class="btn m-3 btn-outline-secondary my-2 my-sm-0">
-          <a [routerLink]="['/register']" class="nav-link">
-            Register
-          </a>
-        </button>
-      </form>
+      <!-- Action -->
+      <!-- TODO arreglar que se ponga el borde del boton por la parte interior del boton para que no desplace todo -->
+      <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+        <a [routerLink]="['register']" class="btn"> Register </a>
+      </div>
     </div>
- 
- 
-    <div *ngIf="!log">
-      <form class="form-inline">
-        <button class="btn m-3 btn-outline-secondary my-2 my-sm-0">
-          <a [routerLink]="['/user']" class="nav-link">
-            Tu Cuenta
-          </a>
-        </button>
-      </form>
-
-    </div>
-  </nav>
+  </div>
 </div>

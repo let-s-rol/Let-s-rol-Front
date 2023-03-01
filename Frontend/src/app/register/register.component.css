@@ -98,7 +98,7 @@ h6 span {
   transition: all 0.5s ease;
 
   content: "";
-  background-image: url("dice-d20-solid.svg");
+  background-image: url("../../assets/register/dice-d20-solid.svg");
   background-size: 23px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -307,6 +307,5 @@ h6 span {
 }
 .logo img {
   height: 26px;
-  width: auto;
-  display: block;
+
 }

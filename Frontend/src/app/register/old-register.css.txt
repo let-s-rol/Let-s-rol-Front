@@ -1,3 +1,0 @@
-.errorPassword {
-  color: red;
-}
