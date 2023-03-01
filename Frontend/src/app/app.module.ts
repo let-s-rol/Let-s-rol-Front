@@ -14,7 +14,7 @@ import { ChangeInfoComponent } from './change-info/change-info.component';
 import { StudentMenuComponent } from './student-menu/student-menu.component';
 import { GameCardButtonComponent } from './game-card-button/game-card-button.component';
 import { NavLinksComponent } from './nav-links/nav-links.component';
-import { AbautUSComponent } from './abaut-us/abaut-us.component';
+import { AboutUSComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +28,10 @@ import { AbautUSComponent } from './abaut-us/abaut-us.component';
     StudentMenuComponent,
     GameCardButtonComponent,
     NavLinksComponent,
-    AbautUSComponent
+    AboutUSComponent,
   ],
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
