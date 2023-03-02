@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './inferfaces/User';
 import { filter } from 'rxjs';
-import { Login } from './inferfaces/login';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UsersService {
-  readonly Url = 'https://127.0.0.1:8000/api/';
+  UsersServiceComponentFactory(UsersService: UsersService) {
+    throw new Error('Method not implemented.');
+  }
+  readonly Url = 'http://127.0.0.1:8000/api/';
 
   constructor(private _http: HttpClient) {}
 
@@ -16,26 +18,26 @@ export class UsersService {
 
   getUser() {
     // get
-    return this._http.get<User[]>(this.Url + 'user').pipe(
-      
-      filter((response: any) => {
-        let found = false;
-        if (response != null) {
-          found = true;
-        } else {
-          found = false;
-        }
-        this.userData = response;
-        return found;
-      })
-
-    );
+    return this._http
+      .get<User[]>(this.Url + 'user')
+      .pipe(
+        filter((response: any) => {
+          let found = false;
+          if (response != null) {
+            found = true;
+          } else {
+            found = false;
+          }
+          this.userData = response;
+          return found;
+        })
+      )
   }
 
   addUser(user: User) {
-    return this._http.post(this.Url + 'register', user).pipe(
-      
-      filter((response: any) => {
+    return this._http
+      .post(this.Url + 'register', user)
+      .subscribe((response) => {
         let found = false;
         if (response != null) {
           found = true;
@@ -44,15 +46,13 @@ export class UsersService {
         }
         this.userData = response;
         return found;
-      })
-
-    );
+      });
   }
 
-  login(login: Login) {
+
+  login(login: User) {
     return this._http.post(this.Url + 'login', login).pipe(
-      
-      filter((response: any) => {
+      filter((response) => {
         let found = false;
         if (response != null) {
           found = true;
@@ -62,7 +62,6 @@ export class UsersService {
         this.userData = response;
         return found;
       })
-
     );
   }
 }

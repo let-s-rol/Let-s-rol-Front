@@ -8,5 +8,7 @@ export interface User {
   date: Date;
   school: string;
   rol: String;
-  img:String;
+  img: String;
+  sex: number;
+
 }

@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
@@ -29,8 +29,9 @@ import { AboutUSComponent } from './about-us/about-us.component';
     GameCardButtonComponent,
     NavLinksComponent,
     AboutUSComponent,
+    
   ],
-  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
