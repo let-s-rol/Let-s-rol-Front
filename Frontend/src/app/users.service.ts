@@ -18,20 +18,16 @@ export class UsersService {
 
   getUser() {
     // get
-    return this._http
-      .get<User[]>(this.Url + 'user')
-      .pipe(
-        filter((response: any) => {
-          let found = false;
-          if (response != null) {
-            found = true;
-          } else {
-            found = false;
-          }
-          this.userData = response;
-          return found;
-        })
-      )
+    return this._http.get<User[]>(this.Url + 'user').pipe(
+      filter((response: any) => {
+        let found = false;
+        if (response != null) {
+          found = true;
+        }
+        this.userData = response;
+        return found;
+      })
+    );
   }
 
   addUser(user: User) {
@@ -41,14 +37,11 @@ export class UsersService {
         let found = false;
         if (response != null) {
           found = true;
-        } else {
-          found = false;
         }
         this.userData = response;
         return found;
       });
   }
-
 
   login(login: User) {
     return this._http.post(this.Url + 'login', login).pipe(
@@ -56,8 +49,6 @@ export class UsersService {
         let found = false;
         if (response != null) {
           found = true;
-        } else {
-          found = false;
         }
         this.userData = response;
         return found;
