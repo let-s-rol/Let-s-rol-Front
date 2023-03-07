@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   [x: string]: any;
 
   user: FormGroup;
+  loginForm: FormGroup;
 
   constructor(public router: Router, private UsersService: UsersService) {
     this.user = new FormGroup({
@@ -23,13 +24,27 @@ export class RegisterComponent implements OnInit {
         Validators.minLength(6),
       ]),
     });
+
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.minLength(6),
+      ]),
+    });
   }
   send(): any {
-
     console.log(this.user.value);
     this.UsersService.addUser(this.user.value);
 
     this.router.navigate(['']);
+  }
+
+  login(): any {
+    console.log(JSON.stringify(this.loginForm.value));
+    this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
+      console.log(resp);
+    });
   }
 
   ngOnInit(): void {}

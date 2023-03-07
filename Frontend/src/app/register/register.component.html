@@ -23,18 +23,21 @@
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3">Iniciar sesion</h4>
 
-                    <div class="form-group">
-                      <input
+                    
+                      <form (ngSubmit)="login()" [formGroup]="loginForm">
+
+                        <input
                         type="email"
                         name="logemail"
                         class="form-style"
                         placeholder="Correo electronico"
                         id="logemail"
                         autocomplete="off"
+                        formControlName="email"
                       />
 
                       <i class="input-icon fa-solid fa-user-astronaut"></i>
-                    </div>
+               
                     <div class="form-group mt-2">
                       <input
                         type="password"
@@ -43,13 +46,17 @@
                         placeholder="Contraseña"
                         id="logpass"
                         autocomplete="off"
+                        formControlName="password"
                       />
 
                       <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                       <i class="input-icon fa-solid fa-unlock-keyhole"></i>
                     </div>
 
-                    <a href="#" class="btn mt-4">Entrar</a>
+                    <button type="submit" class="btn mt-4">Entrar</button>
+
+                      </form>
+                     
 
                     <p class="mb-0 mt-4 text-center">
                       <a class="link">Perdiste la contraseña?</a>
