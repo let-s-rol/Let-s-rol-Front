@@ -1,6 +1,25 @@
 <div class="slide-container">
   <div class="wrapper">
-    <div class="card">
+
+    <div *ngFor="let eq of cards" class="card">
+      
+      <div style="background-image: url({{eq.bg}});" class="card__image">
+       
+        <img 
+        [src]="eq.img"
+        
+      />
+
+    </div>
+
+
+    <div class="card__unit-name">{{eq.name}}</div>
+
+
+    </div>
+
+
+    <!-- <div class="card">
       <div class="card__image">
        
         <img
@@ -13,6 +32,9 @@
 
       <div class="card__unit-name">Kingdom Hearts</div>
 
-    </div>
+    </div> -->
   </div>
 </div>
+
+
+

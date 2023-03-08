@@ -28,7 +28,7 @@ section {
 .banner3d-1 {
     width:100%;
     perspective: 700px;
-    -webkit-transform-style:flat; /* why would I do that? well there is a very strange bug with safari, and it fixed it... */
+    -webkit-transform-style:flat;
     transform-style: preserve-3d;
 }
 

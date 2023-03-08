@@ -30,12 +30,11 @@
 	 font-size: 30px;
 }
 
- .card__image {
-	 background: url('https://imgs.search.brave.com/kEUdx-VW5WT7RDeeCbMgVAT6sX4lsqgHajSc60zl4uY/rs:fit:1200:1200:1/g:ce/aHR0cDovL2Nkbi53/YWxscGFwZXJzYWZh/cmkuY29tLzk0LzMv/WTdWNGwwLmpwZw');
-}
-
  .card__image img {
 	 width: 350px;
+	 height: 315px;
+	 object-fit: cover;
+	 object-position: center top;
 	 position: absolute;
 	 top: -85px;
 	 left: -25px;
