@@ -33,9 +33,9 @@ export class GameCardButtonComponent implements OnInit {
 
         "name":"Dungeon & Dragons",
 
-        "bg":"https://i.pinimg.com/736x/2b/b0/62/2bb06297906fd0759245abbca5168173.jpg",
+        "bg":"https://imgs.search.brave.com/Qwel5v6ZeqXOB30XE6bGzqBpXQI_xrPT3erjRh_CgaU/rs:fit:600:375:1/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWNyZWF0/aXZlcy5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMTYvMDUv/WWVsbG93LUdyYWRp/ZW50LUhELUJhY2tn/cm91bmQuanBn",
 
-        "img":"https://cdn.pixabay.com/photo/2021/01/28/14/47/druid-5958196_1280.png",
+        "img":"../../assets/gameCards/d&d.png",
         "height":"20px"
 
       } 
