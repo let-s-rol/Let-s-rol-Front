@@ -1,45 +1,56 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
- *, *:before, *:after {
-	 box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+
+}
 .wrapper {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: center;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
 }
-	.card {
-	 background: white;
-	 width: 300px;
-	 display: inline-block;
-	 margin: 10px 50px 50px 10px;
-	 border-radius: 19px;
-	 position: relative;
-	 text-align: center;
-	 box-shadow: -1px 15px 30px -12px black;
-	 z-index: 9999;
+.cards {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  margin: 10px 50px 50px 10px;
+  border-radius: 19px;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+  z-index: 9999;
 }
- .card__image {
-	 position: relative;
-	 height: 230px;
-	 margin-bottom: 35px;
-	 border-top-left-radius: 14px;
-	 border-top-right-radius: 14px;
+.card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
 }
- .card__unit-name {
-    font-family: 'Permanent Marker', cursive;
-	 font-size: 30px;
+.card__unit-name {
+  font-family: "Permanent Marker", cursive;
+  font-size: 30px;
 }
 
- .card__image img {
-	 width: 350px;
-	 height: 315px;
-	 object-fit: cover;
-	 object-position: center top;
-	 position: absolute;
-	 top: -85px;
-	 left: -25px;
+.card__image img {
+  width: 350px;
+  height: 315px;
+  object-fit: cover;
+  object-position: center top;
+  position: absolute;
+  top: -85px;
+  left: -21px;
 }
