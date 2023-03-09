@@ -45,6 +45,7 @@ export class RegisterComponent implements OnInit {
     this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
       console.log(resp);
     });
+    
   }
 
   ngOnInit(): void {}
