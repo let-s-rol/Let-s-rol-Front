@@ -8,7 +8,6 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
 import { UserPanelComponent } from './user-panel/user-panel.component';
 import { ChangeInfoComponent } from './change-info/change-info.component';
 import { StudentMenuComponent } from './student-menu/student-menu.component';
@@ -22,7 +21,6 @@ import { AboutUSComponent } from './about-us/about-us.component';
     HomeComponent,
     RegisterComponent,
     NavbarComponent,
-    LoginComponent,
     UserPanelComponent,
     ChangeInfoComponent,
     StudentMenuComponent,
