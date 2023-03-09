@@ -112,6 +112,6 @@ nav a:nth-child(3):hover ~ #indicator {
 }
 nav a:nth-child(4):hover ~ #indicator {
   left: 84%;
-  background: linear-gradient(130deg, rgb(223, 43, 64), rgb(109, 109, 174));
+  background: linear-gradient(130deg, rgb(131, 228, 106), rgb(168, 168, 209));
   width: 40px;
 }

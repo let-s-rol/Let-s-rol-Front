@@ -23,10 +23,8 @@
                   <div class="section text-center">
                     <h4 class="mb-4 pb-3">Iniciar sesion</h4>
 
-                    
-                      <form (ngSubmit)="login()" [formGroup]="loginForm">
-
-                        <input
+                    <form (ngSubmit)="login()" [formGroup]="loginForm">
+                      <input
                         type="email"
                         name="logemail"
                         class="form-style"
@@ -35,28 +33,25 @@
                         autocomplete="off"
                         formControlName="email"
                       />
-
                       <i class="input-icon fa-solid fa-user-astronaut"></i>
-               
-                    <div class="form-group mt-2">
-                      <input
-                        type="password"
-                        name="logpass"
-                        class="form-style"
-                        placeholder="Contraseña"
-                        id="logpass"
-                        autocomplete="off"
-                        formControlName="password"
-                      />
 
-                      <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                      <i class="input-icon fa-solid fa-unlock-keyhole"></i>
-                    </div>
+                      <div class="form-group mt-2">
+                        <input
+                          type="password"
+                          name="logpass"
+                          class="form-style"
+                          placeholder="Contraseña"
+                          id="logpass"
+                          autocomplete="off"
+                          formControlName="password"
+                        />
 
-                    <button type="submit" class="btn mt-4">Entrar</button>
+                        <!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <i class="input-icon fa-solid fa-unlock-keyhole"></i>
+                      </div>
 
-                      </form>
-                     
+                      <button type="submit" class="btn mt-4">Entrar</button>
+                    </form>
 
                     <p class="mb-0 mt-4 text-center">
                       <a class="link">Perdiste la contraseña?</a>
@@ -114,7 +109,6 @@
                       <button
                         ngClass="{ 'disable': user.invalid }"
                         [disabled]="user.invalid"
-                        
                         class="btn mt-4"
                       >
                         Registrar
