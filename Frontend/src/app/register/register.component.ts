@@ -44,6 +44,11 @@ export class RegisterComponent implements OnInit {
     console.log(JSON.stringify(this.loginForm.value));
     this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
       console.log(resp);
+
+          // Almacena el Acces Token en el Local Storage
+      localStorage.setItem('access_token', resp.access_token);
+
+
     });
     
   }
