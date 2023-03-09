@@ -6,6 +6,7 @@ import { filter } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
+
 export class UsersService {
   UsersServiceComponentFactory(UsersService: UsersService) {
     throw new Error('Method not implemented.');
@@ -44,6 +45,8 @@ export class UsersService {
   }
 
   login(login: User) {
+    console.log("Axel estuvo aquí");
+    
     return this._http.post(this.Url + 'login', login).pipe(
       filter((response) => {
         let found = false;
@@ -54,5 +57,5 @@ export class UsersService {
         return found;
       })
     );
-  }
+  } 
 }
