@@ -1,40 +1,10 @@
-<div class="slide-container">
-  <div class="wrapper">
+<div class="wrapper">
+  <button *ngFor="let eq of cards" class="cards">
 
-    <div *ngFor="let eq of cards" class="card">
-      
-      <div style="background-image: url({{eq.bg}});" class="card__image">
-       
-        <img 
-        [src]="eq.img"
-        
-      />
-
+    <div style="background-image: url({{ eq.bg }})" class="card__image">
+      <img [src]="eq.img" />
     </div>
 
-
-    <div class="card__unit-name">{{eq.name}}</div>
-
-
-    </div>
-
-
-    <!-- <div class="card">
-      <div class="card__image">
-       
-        <img
-          src="https://imgs.search.brave.com/Wt2sdEpSRr9rzDciZmT6BA3C5PkUg2sQSuAdemfr350/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/cGluY2xpcGFydC5j/b20vcGljZGlyL2Jp/Zy81NjctNTY3NzAy/MV9raW5nZG9tLWhl/YXJ0cy0xLWFydHdv/cmstY2xpcGFydC5w/bmc"
-          alt="barbarian"
-        />
-
-      </div>
-
-
-      <div class="card__unit-name">Kingdom Hearts</div>
-
-    </div> -->
-  </div>
+    <div class="card__unit-name">{{ eq.name }}</div>
+  </button>
 </div>
-
-
-
