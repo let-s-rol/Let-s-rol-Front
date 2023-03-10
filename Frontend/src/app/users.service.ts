@@ -45,7 +45,7 @@ export class UsersService {
   }
 
   login(login: User) {
-    console.log("Axel estuvo aquí");
+
     
     return this._http.post(this.Url + 'login', login).pipe(
       filter((response) => {

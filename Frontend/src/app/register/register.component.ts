@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
-import { ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-register',
@@ -11,6 +10,8 @@ import { ViewChild } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   [x: string]: any;
+
+  token: any = "";
 
   user: FormGroup;
   loginForm: FormGroup;
@@ -37,7 +38,9 @@ export class RegisterComponent implements OnInit {
     console.log(this.user.value);
     this.UsersService.addUser(this.user.value);
 
-    this.router.navigate(['']);
+    this.router.navigate(['register']);
+    // TODO Rediriguir al login
+
   }
 
   login(): any {
@@ -45,14 +48,16 @@ export class RegisterComponent implements OnInit {
     this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
       console.log(resp);
 
-          // Almacena el Acces Token en el Local Storage
+      // Almacena el Acces Token en el Local Storage
       localStorage.setItem('access_token', resp.access_token);
-      console.log(resp.access_token);
-
-
+   
+      this.token = resp.access_token;
+     
+      this.router.navigate(['']);
+      
     });
-    
   }
+  
 
   ngOnInit(): void {}
 }
