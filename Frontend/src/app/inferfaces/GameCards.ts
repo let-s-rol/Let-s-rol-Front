@@ -1,7 +1,8 @@
 export interface GameCards {
-  img: string;
-  bg: string;
+
+  img_game: string;
+  img_background: string;
   name: string;
-  height: number;
+  online: boolean;
 
 }

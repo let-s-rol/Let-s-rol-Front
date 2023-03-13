@@ -1,8 +1,9 @@
 <div class="wrapper">
   <button *ngFor="let eq of cards" class="cards">
 
-    <div style="background-image: url({{ eq.bg }})" class="card__image">
-      <img [src]="eq.img" />
+    <!-- <div style="background-image: url(eq.img_background)" class="card__image"> -->
+      <div  [ngStyle]="{'background-image': 'url(' + eq.img_background + ')'}" class="card__image">
+      <img [src]="eq.img_game" />
     </div>
 
     <div class="card__unit-name">{{ eq.name }}</div>

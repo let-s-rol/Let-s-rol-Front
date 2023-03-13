@@ -69,11 +69,11 @@ nav a:nth-child(3):after {
   background-color: palevioletred;
 }
 nav a:nth-child(4):before {
-  background-color: purple;
+  background-color: #cdbe8f;
 }
 
 nav a:nth-child(4):after {
-  background-color: palevioletred;
+  background-color: yellow;
 }
 
 #indicator {
@@ -89,6 +89,9 @@ nav a:nth-child(4):after {
 
 nav a:hover {
   color: #fff;
+}
+.plus:hover{
+  color: #d4af37 !important;
 }
 
 nav a:hover:before,
@@ -112,6 +115,6 @@ nav a:nth-child(3):hover ~ #indicator {
 }
 nav a:nth-child(4):hover ~ #indicator {
   left: 84%;
-  background: linear-gradient(130deg, rgb(131, 228, 106), rgb(168, 168, 209));
+  background: linear-gradient(130deg, #d4af37, yellow);
   width: 40px;
 }
