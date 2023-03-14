@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, OnInit, } from '@angular/core';
+import { FormGroup, FormControl, Validators, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -12,9 +12,12 @@ export class RegisterComponent implements OnInit {
   [x: string]: any;
 
   token: any = "";
-
+  binding: any = false; 
   user: FormGroup;
   loginForm: FormGroup;
+  regLog = false;
+
+ 
 
   constructor(public router: Router, private UsersService: UsersService) {
     this.user = new FormGroup({
@@ -37,8 +40,8 @@ export class RegisterComponent implements OnInit {
   send(): any {
     console.log(this.user.value);
     this.UsersService.addUser(this.user.value);
+    this.checkCheckbox();
 
-    this.router.navigate(['']);
     // TODO Rediriguir al login
 
   }
@@ -58,6 +61,9 @@ export class RegisterComponent implements OnInit {
     });
   }
   
+  checkCheckbox() {
+    this.regLog = false;
+  }
 
   ngOnInit(): void {}
 }

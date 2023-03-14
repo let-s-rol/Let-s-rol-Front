@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
   log:boolean = true; 
 
   token:any;
-  constructor(register: RegisterComponent) {
-    this.token = register.token;
+  constructor() {
+
   }
 
   ngOnInit(): void {
