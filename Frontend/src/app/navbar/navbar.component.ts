@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterComponent } from '../register/register.component';
 
 @Component({
   selector: 'app-navbar',
@@ -11,8 +12,9 @@ export class NavbarComponent implements OnInit {
 // TODO hacer que esta flag cambie cuando hay alguien logueado.
   log:boolean = true; 
 
-  constructor() {
-    
+  token:any;
+  constructor(register: RegisterComponent) {
+    this.token = register.token;
   }
 
   ngOnInit(): void {
