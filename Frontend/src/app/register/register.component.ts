@@ -51,6 +51,7 @@ export class RegisterComponent implements OnInit {
   }
 
   login(): any {
+
     console.log(JSON.stringify(this.loginForm.value));
     this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
       console.log(resp);

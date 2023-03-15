@@ -61,15 +61,6 @@ export class UsersService {
     
   } 
 
-  // login(email: string, password: string): Observable<any> {
-
-  //   const body = { "email": email, password: password };
-    
-  //   console.log(this._http.post<any>('api/login', body));
-
-  //   return this._http.post<any>('api/login', body);
-  // }
-
   logout(): void {
     localStorage.removeItem('access_token');
   }

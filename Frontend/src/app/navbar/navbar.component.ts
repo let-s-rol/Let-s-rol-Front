@@ -9,15 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  log: boolean = true;
+  log: boolean;
+  servze: any;
 
-  constructor(public router: Router, service: UsersService) {
+  constructor(public router: Router, public service: UsersService) {
     this.log = service.isAuthenticated();
+    this.servze = service;
   }
 
-  logout(service: UsersService) {
-    service.logout();
-    this.router.navigate(['']);
+  logout() {
+    
+    let w = window as any;
+
+    this.service.logout();
+    w.location.reload();
   }
 
   ngOnInit(): void {}
