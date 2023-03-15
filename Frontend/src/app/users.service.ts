@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './inferfaces/User';
 import { filter } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class UsersService {
   UsersServiceComponentFactory(UsersService: UsersService) {
     throw new Error('Method not implemented.');
@@ -44,18 +44,20 @@ export class UsersService {
       });
   }
 
-  login(login: User) {
+  login(email: string, password: string): Observable<any> {
+    const body = { email: email, password: password };
+    console.log(this._http.post<any>('/api/login', body));
 
-    
-    return this._http.post(this.Url + 'login', login).pipe(
-      filter((response) => {
-        let found = false;
-        if (response != null) {
-          found = true;
-        }
-        this.userData = response;
-        return found;
-      })
-    );
-  } 
+    return this._http.post<any>('/api/login', body);
+  }
+
+  logout(): void {
+    localStorage.removeItem('access_token');
+  }
+
+  isAuthenticated(): boolean {
+    const token = localStorage.getItem('access_token');
+    // si existe un token, el usuario está autenticado
+    return token !== null;
+  }
 }

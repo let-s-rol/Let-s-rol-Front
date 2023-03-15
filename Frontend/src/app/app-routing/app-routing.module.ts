@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from '../home/home.component';
-import { UserPanelComponent } from '../user-panel/user-panel.component';
+
 import { RegisterComponent } from '../register/register.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'user', component: UserPanelComponent },
   { path: 'register', component: RegisterComponent},
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];

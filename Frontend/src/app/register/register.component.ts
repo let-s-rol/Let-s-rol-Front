@@ -3,6 +3,8 @@ import { FormGroup, FormControl, Validators, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from '../auth.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,7 +13,7 @@ import { FormsModule } from '@angular/forms';
 export class RegisterComponent implements OnInit {
   [x: string]: any;
 
-  token: any = "";
+  token: any = "token";
   binding: any = false; 
   user: FormGroup;
   loginForm: FormGroup;
@@ -40,6 +42,8 @@ export class RegisterComponent implements OnInit {
   send(): any {
     console.log(this.user.value);
     this.UsersService.addUser(this.user.value);
+    
+    
     this.checkCheckbox();
 
     // TODO Rediriguir al login
@@ -48,20 +52,21 @@ export class RegisterComponent implements OnInit {
 
   login(): any {
     console.log(JSON.stringify(this.loginForm.value));
-    this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
-      console.log(resp);
-
-      // Almacena el Acces Token en el Local Storage
-      localStorage.setItem('access_token', resp.access_token);
    
-      this.token = resp.access_token;
-     
-      this.router.navigate(['']);
-      
-    });
+    this.UsersService.login(this.loginForm.get('email')?.value,this.loginForm.get('password')?.value)
+      .subscribe((resp: any) => {
+        console.log(resp);
+  
+        // Almacena el Acces Token en el Local Storage
+        localStorage.setItem('access_token', resp.access_token);
+  
+        // Navega a la página principal
+        this.router.navigate(['']);
+      });
   }
   
   checkCheckbox() {
+    // TODO hacer que cambie el check entre registro y login
     this.regLog = false;
   }
 
