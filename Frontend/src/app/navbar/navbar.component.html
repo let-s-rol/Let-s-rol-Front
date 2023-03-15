@@ -27,13 +27,13 @@
       <!-- Action -->
 
 
-      <div *ngIf="log" class="d-flex align-items-lg-center mt-3 mt-lg-0">
+      <div *ngIf="!log" class="d-flex align-items-lg-center mt-3 mt-lg-0">
         <a (click)="logout" class="btn">  cerrar sesión</a> 
         <!-- TODO cambiar estética del botón -->
     </div>
 
 
-      <div *ngIf="!log"  class="d-flex align-items-lg-center mt-3 mt-lg-0">
+      <div *ngIf="log"  class="d-flex align-items-lg-center mt-3 mt-lg-0">
           <a [routerLink]="['register']" class="btn"> Entra </a>
       </div>
 

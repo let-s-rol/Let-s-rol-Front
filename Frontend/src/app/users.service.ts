@@ -44,12 +44,31 @@ export class UsersService {
       });
   }
 
-  login(email: string, password: string): Observable<any> {
-    const body = { email: email, password: password };
-    console.log(this._http.post<any>('/api/login', body));
 
-    return this._http.post<any>('/api/login', body);
-  }
+
+  login(login: User) {
+    
+    return this._http.post(this.Url + 'login', login).pipe(
+      filter((response) => {
+        let found = false;
+        if (response != null) {
+          found = true;
+        }
+        this.userData = response;
+        return found;
+      })
+    );
+    
+  } 
+
+  // login(email: string, password: string): Observable<any> {
+
+  //   const body = { "email": email, password: password };
+    
+  //   console.log(this._http.post<any>('api/login', body));
+
+  //   return this._http.post<any>('api/login', body);
+  // }
 
   logout(): void {
     localStorage.removeItem('access_token');

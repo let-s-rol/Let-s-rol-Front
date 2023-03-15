@@ -52,17 +52,17 @@ export class RegisterComponent implements OnInit {
 
   login(): any {
     console.log(JSON.stringify(this.loginForm.value));
+    this.UsersService.login(this.loginForm.value).subscribe((resp: any) => {
+      console.log(resp);
+
+      // Almacena el Acces Token en el Local Storage
+      localStorage.setItem('access_token', resp.access_token);
    
-    this.UsersService.login(this.loginForm.get('email')?.value,this.loginForm.get('password')?.value)
-      .subscribe((resp: any) => {
-        console.log(resp);
-  
-        // Almacena el Acces Token en el Local Storage
-        localStorage.setItem('access_token', resp.access_token);
-  
-        // Navega a la página principal
-        this.router.navigate(['']);
-      });
+      this.token = resp.access_token;
+     
+      this.router.navigate(['']);
+      
+    });
   }
   
   checkCheckbox() {
