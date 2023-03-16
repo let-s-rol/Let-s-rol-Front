@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ChangeInfoComponent } from './change-info/change-info.component';
@@ -15,6 +15,7 @@ import { AboutUSComponent } from './about-us/about-us.component';
 import { SlectGameComponent } from './slect-game/slect-game.component';
 import { SeachGameKHComponent } from './seach-game-kh/seach-game-kh.component';
 import { SelectGameKHComponent } from './select-game-kh/select-game-kh.component';
+import { OptionGameSearchListComponent } from './option-game-search-list/option-game-search-list.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SelectGameKHComponent } from './select-game-kh/select-game-kh.component
     SlectGameComponent,
     SeachGameKHComponent,
     SelectGameKHComponent,
+    OptionGameSearchListComponent,
  
     
   ],
