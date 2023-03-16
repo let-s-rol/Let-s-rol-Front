@@ -2,7 +2,7 @@
     height: 100vh;
     }
 
-#div-container {
-    margin-top: 100px!;
+.customed-div {
+    margin-top: 10% !important;
 }
 
