@@ -24,6 +24,8 @@ button {
   justify-content: center;
 }
 .cards {
+  
+  padding-top: 0;
   background: white;
   width: 300px;
   display: inline-block;
@@ -35,6 +37,7 @@ button {
   z-index: 9999;
 }
 .card__image {
+  padding: 0px;
   position: relative;
   height: 230px;
   margin-bottom: 35px;
@@ -47,6 +50,7 @@ button {
 }
 
 .card__image img {
+  
   width: 350px;
   height: 315px;
   object-fit: cover;
