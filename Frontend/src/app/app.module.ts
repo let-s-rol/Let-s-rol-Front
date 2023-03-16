@@ -16,6 +16,7 @@ import { SlectGameComponent } from './slect-game/slect-game.component';
 import { SeachGameKHComponent } from './seach-game-kh/seach-game-kh.component';
 import { SelectGameKHComponent } from './select-game-kh/select-game-kh.component';
 import { OptionGameSearchListComponent } from './option-game-search-list/option-game-search-list.component';
+import { RunListComponent } from './run-list/run-list.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { OptionGameSearchListComponent } from './option-game-search-list/option-
     SeachGameKHComponent,
     SelectGameKHComponent,
     OptionGameSearchListComponent,
+    RunListComponent,
  
     
   ],
