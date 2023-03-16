@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <button *ngFor="let eq of cards" class="cards">
+  <button [routerLink]="['selectGame']" *ngFor="let eq of cards" class="cards">
 
     <!-- <div style="background-image: url(eq.img_background)" class="card__image"> -->
       <div  [ngStyle]="{'background-image': 'url(' + eq.img_background + ')'}" class="card__image">

@@ -5,10 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 
 import { RegisterComponent } from '../register/register.component';
+import { SelectGameKHComponent } from '../select-game-kh/select-game-kh.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'register', component: RegisterComponent},
+  { path: 'selectGame', component: SelectGameKHComponent},
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 
