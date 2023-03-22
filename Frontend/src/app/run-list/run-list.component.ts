@@ -8,19 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class RunListComponent implements OnInit {
   rute: string = '../../assets/runCards/hollowed-boxes (';
   name: string = 'nombre';
-  img: string = '';
-  maxFoto: number = 10;
-  num: number = 0;
+
+  NewImg: string = this.rute + this.getRandomInt() + ').svg';
+
   constructor() {}
 
-  selectImg(): string {
-    this.num = this.getRandomInt();
-    this.img = this.rute + this.num + ').svg';
-
-    return this.img;
-  }
   getRandomInt() {
-    return Math.floor(Math.random() * this.maxFoto);
+    return Math.floor(Math.random() * 10);
   }
 
   ngOnInit(): void {}

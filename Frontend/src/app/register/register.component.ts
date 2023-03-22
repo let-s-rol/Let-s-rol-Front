@@ -12,12 +12,12 @@ export class RegisterComponent implements OnInit {
   [x: string]: any;
 
   token: any = "token";
-  binding: any = false; 
+  binding: any = false;
   user: FormGroup;
   loginForm: FormGroup;
   regLog = false;
 
- 
+
 
   constructor(public router: Router, private UsersService: UsersService) {
     this.user = new FormGroup({
@@ -40,8 +40,7 @@ export class RegisterComponent implements OnInit {
   send(): any {
     console.log(this.user.value);
     this.UsersService.addUser(this.user.value);
-    
-    
+
     this.checkCheckbox();
 
     // TODO Rediriguir al login
@@ -56,14 +55,14 @@ export class RegisterComponent implements OnInit {
 
       // Almacena el Acces Token en el Local Storage
       localStorage.setItem('access_token', resp.access_token);
-   
+
       this.token = resp.access_token;
-     
+
       this.router.navigate(['']);
-      
+
     });
   }
-  
+
   checkCheckbox() {
     // TODO hacer que cambie el check entre registro y login
     this.regLog = false;
