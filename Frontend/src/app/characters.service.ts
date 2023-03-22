@@ -12,13 +12,13 @@ export class CharactersService {
 
   readonly Url = 'http://127.0.0.1:8000/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
   baseCharacterData: any;
 
   addBaseCharacter(baseCharacter: BaseCharacter) {
     return this._http
-      .post(this.Url + 'register', baseCharacter)
+      .post(this.Url + /*'register'*/'', baseCharacter)
       .subscribe((response) => {
         let found = false;
         if (response != null) {
