@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UsersService } from '../users.service';
 import { BaseCharacter } from '../inferfaces/baseCharacter';
 
 @Component({
@@ -8,18 +10,28 @@ import { BaseCharacter } from '../inferfaces/baseCharacter';
   styleUrls: ['./character-base.component.css'],
 })
 export class CharacterBaseComponent implements OnInit {
-  newCharacterBase!: BaseCharacter;
+  baseCharacter: BaseCharacter;
 
-  constructor() {
-    this.newCharacterBase = new FormGroup({
-      nick: new FormControl(null, Validators.required),
-      race: new FormControl(null, Validators.required),
-      description: new FormControl(null, Validators.required),
-      img: new FormControl(null, Validators.required)
+  constructor(public router: Router, private UsersService: UsersService) {
+    this.baseCharacter = new FormGroup({
+      race: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      nick: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      description: new FormControl('', []),
+      img: new FormControl('', []),
     });
 
   }
+  save(): any {
+    // console.log(this.baseCharacter.value);
+
+    // TODO llamar a la función para enviar las cosas
+    // this.UsersService.addUser(this.user.value);
+
+  
+
+    // TODO Rediriguir al menu de juego
+  }
+
 
   ngOnInit(): void {}
-  save() {}
 }
