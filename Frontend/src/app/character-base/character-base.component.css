@@ -89,17 +89,17 @@
   /* modules/anchor.css */
   
   :host {
-    --anchorColor: #eee;
+    --anchorColor: #ef0cd1;
   }
   
-  a {
+  button {
     color: var(--anchorColor);
     outline: 0;
     text-decoration: none;
   }
   
-  a:focus,
-  a:hover {
+  button:focus,
+  button:hover {
     text-decoration: underline;
   }
   
