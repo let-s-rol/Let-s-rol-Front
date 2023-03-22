@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GameCards } from '../inferfaces/GameCards';
+import { GameCards } from '../../inferfaces/GameCards';
 
 @Component({
   selector: 'app-game-card-button',

@@ -8,15 +8,13 @@ import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ChangeInfoComponent } from './change-info/change-info.component';
-import { GameCardButtonComponent } from './game-card-button/game-card-button.component';
+import { GameCardButtonComponent } from './home/game-card-button/game-card-button.component';
+import { AboutUSComponent } from './home/about-us/about-us.component';
 
-import { AboutUSComponent } from './about-us/about-us.component';
-import { SlectGameComponent } from './slect-game/slect-game.component';
-import { SeachGameKHComponent } from './seach-game-kh/seach-game-kh.component';
+
 import { SelectGameKHComponent } from './select-game-kh/select-game-kh.component';
-import { OptionGameSearchListComponent } from './option-game-search-list/option-game-search-list.component';
-import { RunListComponent } from './run-list/run-list.component';
+import { OptionGameSearchListComponent } from './select-game-kh/option-game-search-list/option-game-search-list.component';
+import { RunListComponent } from './select-game-kh/run-list/run-list.component';
 import { CharacterBaseComponent } from './character-base/character-base.component';
 import { NavLinkSonComponent } from './navbar/nav-link-son/nav-link-son.component';
 import { NewRunComponent } from './new-run/new-run.component';
@@ -28,19 +26,15 @@ import { NewRunComponent } from './new-run/new-run.component';
     HomeComponent,
     RegisterComponent,
     NavbarComponent,
-    ChangeInfoComponent,
     GameCardButtonComponent,
     AboutUSComponent,
-    SlectGameComponent,
-    SeachGameKHComponent,
     SelectGameKHComponent,
     OptionGameSearchListComponent,
     RunListComponent,
     CharacterBaseComponent,
     NavLinkSonComponent,
     NewRunComponent,
- 
-    
+
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
   providers: [],
