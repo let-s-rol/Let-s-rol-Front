@@ -135,11 +135,11 @@
     inline-size: 100%;
   }
   
-  .form__field {
+  .form_field {
     display: flex;
   }
   
-  .form__input {
+  .form_input {
     flex: 1;
   }
   

@@ -10,7 +10,7 @@ import { BaseCharacter } from '../inferfaces/baseCharacter';
   styleUrls: ['./character-base.component.css'],
 })
 export class CharacterBaseComponent implements OnInit {
-  baseCharacter: BaseCharacter;
+  baseCharacter: FormGroup;
 
   constructor(public router: Router, private UsersService: UsersService) {
     this.baseCharacter = new FormGroup({
