@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BaseCharacter } from './inferfaces/baseCharacter';
+import { BaseCharacter } from 'src/app/inferfaces/baseCharacter';
+import { NewRun } from 'src/app/inferfaces/newRun';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,20 @@ export class CharactersService {
 
   addBaseCharacter(baseCharacter: BaseCharacter) {
     return this._http
-      .post(this.Url + /*'register'*/'', baseCharacter)
+      .post(this.Url + '', baseCharacter)
+      .subscribe((response) => {
+        let found = false;
+        if (response != null) {
+          found = true;
+        }
+        this.baseCharacterData = response;
+        return found;
+      });
+  }
+
+  newRun(newRun: NewRun) {
+    return this._http
+      .post(this.Url + '', newRun)
       .subscribe((response) => {
         let found = false;
         if (response != null) {
