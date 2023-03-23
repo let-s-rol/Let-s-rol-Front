@@ -11,7 +11,7 @@ export class GameCardButtonComponent implements OnInit {
 
   constructor() {
     const UserJSON: string = `{
-      "gameCards": [{ 
+      "gameCards": [{
 
         "name":"kingdom Hearts",
 
@@ -21,29 +21,29 @@ export class GameCardButtonComponent implements OnInit {
 
         "online":"true"
 
-      } 
-      ,{ 
+      }
+      ,{
 
         "name":"Dungeon & Dragons",
 
         "img_background":"../../assets/gameCards/bg_d&d.webp",
 
         "img_game":"../../assets/gameCards/d&d.png",
-      
+
         "online":"true"
 
       } ,
-      { 
+      {
 
         "name":"Warhammer 40K",
 
         "img_background":"../../assets/gameCards/bg_wh40k.webp",
 
         "img_game":"../../assets/gameCards/wh40k.png",
-      
+
         "online":"true"
 
-      } 
+      }
     ]
       }`;
 

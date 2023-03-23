@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UsersService } from '../users.service';
-import {CharactersService} from '../characters.service';
-import { BaseCharacter } from '../inferfaces/baseCharacter';
+import { CharactersService } from '../service/character/characters.service';
 
 @Component({
   selector: 'app-character-base',
