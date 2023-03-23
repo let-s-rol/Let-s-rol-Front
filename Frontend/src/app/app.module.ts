@@ -17,7 +17,7 @@ import { OptionGameSearchListComponent } from './select-game-kh/option-game-sear
 import { RunListComponent } from './select-game-kh/run-list/run-list.component';
 import { CharacterBaseComponent } from './character-base/character-base.component';
 import { NavLinkSonComponent } from './navbar/nav-link-son/nav-link-son.component';
-import { NewRunComponent } from './new-run/new-run.component';
+import { NewRunComponent } from './select-game-kh/new-run/new-run.component';
 
 
 @NgModule({

@@ -7,7 +7,7 @@ import { HomeComponent } from '../home/home.component';
 import { RegisterComponent } from '../register/register.component';
 import { SelectGameKHComponent } from '../select-game-kh/select-game-kh.component';
 import { CharacterBaseComponent } from '../character-base/character-base.component';
-import { NewRunComponent } from '../new-run/new-run.component';
+import { NewRunComponent } from '../select-game-kh/new-run/new-run.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
