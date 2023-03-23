@@ -22,8 +22,8 @@ export class CharacterBaseComponent implements OnInit {
     });
 
   }
-  send(): any {
-    
+  save(): any {
+
     console.log(this.baseCharacter.value);
     // TODO llamar a la función para enviar las cosas
     this.CharactersService.addBaseCharacter(this.baseCharacter.value);
