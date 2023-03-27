@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CharactersService } from '../service/character/characters.service';
 
+
 @Component({
   selector: 'app-character-base',
   templateUrl: './character-base.component.html',
