@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BaseCharacter } from 'src/app/inferfaces/baseCharacter';
-import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class CharactersService {
 
   addBaseCharacter(baseCharacter: BaseCharacter) {
     return this._http
-      .post(this.Url + 'base-character', baseCharacter)
+      .post(this.Url + /*'register'*/'', baseCharacter)
       .subscribe((response) => {
         let found = false;
         if (response != null) {
