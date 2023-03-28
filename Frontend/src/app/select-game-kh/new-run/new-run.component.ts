@@ -25,7 +25,7 @@ export class NewRunComponent implements OnInit {
 
     console.log(this.newRun.value);
     // TODO llamar a la función para enviar las cosas
-    this.CharactersService.newRun(this.newRun.value);
+   // this.CharactersService.newRun(this.newRun.value);
 
     // TODO Rediriguir al menu de juego
   }

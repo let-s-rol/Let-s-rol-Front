@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { BaseCharacter } from 'src/app/inferfaces/baseCharacter';
 
 
 @Injectable({
@@ -12,20 +13,38 @@ export class CharactersService {
 
   readonly Url = 'http://127.0.0.1:8000/api/';
 
+
+
   constructor(private _http: HttpClient) { }
 
   baseCharacterData: any;
 
   addBaseCharacter(baseCharacter: BaseCharacter) {
+    console.log('Payload:', baseCharacter); // Log the payload before making the request
+
+
+    const token = localStorage.getItem('access_token');
+    console.log('Token:', token); // Log token value
+    const headers = { Authorization: `Bearer ${token}` };
+    console.log(localStorage);
+
+    
+
     return this._http
-      .post(this.Url + /*'register'*/'', baseCharacter)
-      .subscribe((response) => {
+      .post(this.Url + 'base-character', JSON.stringify(baseCharacter), { headers })
+      .toPromise()
+      .then(response => {
         let found = false;
         if (response != null) {
           found = true;
+          console.log('Headers:', headers); // log headers object
         }
         this.baseCharacterData = response;
         return found;
+      })
+      .catch(error => {
+        console.log(error);
+        return false;
       });
   }
 
