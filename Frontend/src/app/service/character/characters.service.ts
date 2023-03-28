@@ -28,17 +28,19 @@ export class CharactersService {
     const headers = { Authorization: `Bearer ${token}` };
     console.log(localStorage);
 
+    console.log(this.Url + 'base-character');
     
 
-    return this._http
-      .post(this.Url + 'base-character', JSON.stringify(baseCharacter), { headers })
+    return this._http.post(this.Url + 'base-character', baseCharacter, { headers } )
       .toPromise()
       .then(response => {
+        console.log(response);
+
         let found = false;
         if (response != null) {
           found = true;
-          console.log('Headers:', headers); // log headers object
         }
+
         this.baseCharacterData = response;
         return found;
       })
@@ -46,6 +48,7 @@ export class CharactersService {
         console.log(error);
         return false;
       });
+      
   }
 
 

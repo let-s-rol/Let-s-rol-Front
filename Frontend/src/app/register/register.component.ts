@@ -56,8 +56,9 @@ export class RegisterComponent implements OnInit {
 
       // Almacena el Acces Token en el Local Storage
       localStorage.setItem('access_token', resp.access_token);
-
       this.token = resp.access_token;
+      console.log('access_token');
+      
 
       this.router.navigate(['']);
 

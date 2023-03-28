@@ -1,4 +1,4 @@
 export interface NewRun {
-    name: string;
-    description:string;
+    run_name: string;
+    run_description:string;
   }
