@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './inferfaces/User';
 import { filter } from 'rxjs';
-import { Observable } from 'rxjs';
+import { User } from 'src/app/inferfaces/User';
 
 @Injectable({
   providedIn: 'root',
@@ -44,10 +43,7 @@ export class UsersService {
       });
   }
 
-
-
   login(login: User) {
-    
     return this._http.post(this.Url + 'login', login).pipe(
       filter((response) => {
         let found = false;
@@ -58,8 +54,7 @@ export class UsersService {
         return found;
       })
     );
-    
-  } 
+  }
 
   logout(): void {
     localStorage.removeItem('access_token');

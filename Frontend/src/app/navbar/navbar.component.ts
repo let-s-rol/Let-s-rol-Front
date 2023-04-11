@@ -19,9 +19,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logout() {
-    
     let w = window as any;
-
     this.service.logout();
     w.location.reload();
   }
