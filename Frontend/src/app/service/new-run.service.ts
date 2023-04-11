@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BaseCharacter } from 'src/app/inferfaces/baseCharacter';
+import { NewRun } from '../inferfaces/newRun';
 
 
 @Injectable({
   providedIn: 'root'
 })
-export class CharactersService {
-  CharactersServiceComponentFactory(CharactersService: CharactersService) {
+export class newRunService {
+  CharactersServiceComponentFactory(newRunService: newRunService) {
     throw new Error('Method not implemented.');
   }
 
@@ -17,10 +17,10 @@ export class CharactersService {
 
   constructor(private _http: HttpClient) { }
 
-  baseCharacterData: any;
+  newRunData: any;
 
-  addBaseCharacter(baseCharacter: BaseCharacter) {
-    console.log('Payload:', baseCharacter); // Log the payload before making the request
+  addNewRun (newRun: NewRun, gameId: number) {
+    console.log('Payload:', newRun); // Log the payload before making the request
 
 
     const token = localStorage.getItem('access_token');
@@ -28,10 +28,10 @@ export class CharactersService {
     const headers = { Authorization: `Bearer ${token}` };
     console.log(localStorage);
 
-    console.log(this.Url + 'base-character');
+  
     
 
-    return this._http.post(this.Url + 'base-character', baseCharacter, { headers } )
+    return this._http.post(this.Url + 'games/' + gameId + '/runs', newRun, { headers } )
       .toPromise()
       .then(response => {
         console.log(response);
@@ -41,7 +41,7 @@ export class CharactersService {
           found = true;
         }
 
-        this.baseCharacterData = response;
+        this.newRunData = response;
         return found;
       })
       .catch(error => {
@@ -54,3 +54,4 @@ export class CharactersService {
 
 
 }
+

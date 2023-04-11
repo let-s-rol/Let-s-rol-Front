@@ -9,25 +9,25 @@
 
       <!-- nick -->
       <div class="form_field">
-        <label for="nick"><svg class="icon">
+        <label for="run_name"><svg class="icon">
             <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">Nick</span></label>
-        <input id="nick" type="text" name="nick" class="form_input" placeholder="Nick" formControlName="nick"
+          </svg><span class="hidden">Nombre</span></label>
+        <input id="ru_name" type="text" name="run_name" class="form_input" placeholder="Nombre" formControlName="run_name"
           required />
       </div>
 
 
       <!-- descrition -->
       <div class="form_field">
-        <label for="Descripción"><svg class="icon">
+        <label for="run_description"><svg class="icon">
             <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">descripción</span></label>
-        <input id="description" type="text" name="description" class="form_input" placeholder="Descripción"
-          formControlName="description" required />
+          </svg><span class="hidden">Descripción</span></label>
+        <input id="run_description" type="text" name="run_description" class="form_input" placeholder="Descripción"
+          formControlName="run_description" required />
       </div>
 
       <div class="form_field">
-        <input type="submit" [disabled]="newRun.valid">
+        <input type="submit" [disabled]="!newRun.valid">
 
       </div>
     </form>

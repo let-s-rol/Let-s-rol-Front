@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CharactersService } from 'src/app/service/character/characters.service';
+import { newRunService } from 'src/app/service/new-run.service';
 
 @Component({
   selector: 'app-new-run',
@@ -12,11 +12,11 @@ export class NewRunComponent implements OnInit {
 
   newRun: FormGroup;
 
-  constructor(public router: Router, private CharactersService: CharactersService) {
+  constructor(public router: Router, private newRunService: newRunService) {
     this.newRun = new FormGroup({
 
-      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      description: new FormControl('', []),
+      run_name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      run_description: new FormControl('', []),
 
     });
 
@@ -24,10 +24,11 @@ export class NewRunComponent implements OnInit {
   save(): any {
 
     console.log(this.newRun.value);
-    // TODO llamar a la función para enviar las cosas
-    this.CharactersService.newRun(this.newRun.value);
 
-    // TODO Rediriguir al menu de juego
+    const gameId = 1;
+    this.newRunService.addNewRun(this.newRun.value, gameId)
+ 
+    
   }
 
   ngOnInit(): void {

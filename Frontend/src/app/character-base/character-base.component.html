@@ -9,10 +9,10 @@
 
       <!-- nick -->
       <div class="form_field">
-        <label for="nick"><svg class="icon">
+        <label for="name"><svg class="icon">
             <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">Nick</span></label>
-        <input id="nick" type="text" name="nick" class="form_input" placeholder="Nick" formControlName="nick"
+          </svg><span class="hidden">Nombre</span></label>
+        <input id="name" type="text" name="name" class="form_input" placeholder="Nombre" formControlName="name"
           required />
       </div>
 
@@ -25,25 +25,26 @@
           required />
       </div>
 
-      <!-- img -->
+      <!-- img 
       <div class="form_field">
         <label for="login_username"><svg class="icon">
             <use xlink:href="#icon-user"></use>
           </svg><span class="hidden">Raza</span></label>
         <input id="race" type="image" name="img" class="form_input" placeholder="Raza" formControlName="img" />
       </div>
+      -->
 
-      <!-- descrition -->
+      <!-- description -->
       <div class="form_field">
         <label for="Descripción"><svg class="icon">
             <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">descripción</span></label>
+          </svg><span class="hidden">Descripción</span></label>
         <input id="description" type="text" name="description" class="form_input" placeholder="Descripción"
           formControlName="description" required />
       </div>
 
       <div class="form_field">
-        <input type="submit" [disabled]="baseCharacter.valid">
+        <input type="submit" [disabled]="!baseCharacter.valid">
         
       </div>
     </form>

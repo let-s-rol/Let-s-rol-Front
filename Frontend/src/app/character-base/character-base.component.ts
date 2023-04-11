@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CharactersService } from '../service/character/characters.service';
 
+
 @Component({
   selector: 'app-character-base',
   templateUrl: './character-base.component.html',
@@ -13,8 +14,8 @@ export class CharacterBaseComponent implements OnInit {
 
   constructor(public router: Router, private CharactersService: CharactersService) {
     this.baseCharacter = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       race: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      nick: new FormControl('', [Validators.required, Validators.minLength(3)]),
       description: new FormControl('', []),
       img: new FormControl('', []),
     });
@@ -22,7 +23,7 @@ export class CharacterBaseComponent implements OnInit {
   }
   save(): any {
 
-    console.log(this.baseCharacter.value);
+    console.log(JSON.stringify(this.baseCharacter.value));
     // TODO llamar a la función para enviar las cosas
     this.CharactersService.addBaseCharacter(this.baseCharacter.value);
 
