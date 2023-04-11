@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './inferfaces/User';
 import { filter } from 'rxjs';
 import { User } from 'src/app/inferfaces/User';
 
