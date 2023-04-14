@@ -19,6 +19,8 @@ import { CharacterBaseComponent } from './character-base/character-base.componen
 import { NavLinkSonComponent } from './navbar/nav-link-son/nav-link-son.component';
 import { NewRunComponent } from './select-game-kh/new-run/new-run.component';
 import { GameKhComponent } from './game-kh/game-kh.component';
+import { NewCharacterPannelComponent } from './game-kh/new-character-pannel/new-character-pannel.component';
+
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { GameKhComponent } from './game-kh/game-kh.component';
     NavLinkSonComponent,
     NewRunComponent,
     GameKhComponent,
+    NewCharacterPannelComponent,
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],

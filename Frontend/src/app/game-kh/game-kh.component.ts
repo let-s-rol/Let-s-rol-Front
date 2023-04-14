@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameKhComponent implements OnInit {
 
+// TODO hacer enlace
+  createCharacter : boolean = false
   constructor() { }
 
   ngOnInit(): void {
