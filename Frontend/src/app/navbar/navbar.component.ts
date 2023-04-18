@@ -18,11 +18,6 @@ export class NavbarComponent implements OnInit {
     this.servze = service;
   }
 
-  logout() {
-    let w = window as any;
-    this.service.logout();
-    w.location.reload();
-  }
-
+  
   ngOnInit(): void {}
 }
