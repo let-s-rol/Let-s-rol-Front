@@ -1,0 +1,59 @@
+<div class="row full-height justify-content-center">
+  <!-- Iniciar sesión -->
+
+  <div class="card-3d-wrap mx-auto">
+    <div class="card-3d-wrapper">
+      <div class="card-front">
+        <div class="center-wrap">
+          <div class="section text-center">
+            <h4 class="mb-4 text-light pb-3">Crear personaje</h4>
+
+            <form (ngSubmit)="login()" [formGroup]="loginForm">
+              <div class="form-group mt-2">
+                <input
+                  type="text"
+                  name="name"
+                  class="form-style"
+                  placeholder="name"
+                  id="name"
+                  autocomplete="off"
+                  formControlName="name"
+                />
+
+              </div>
+              <div class="form-group mt-2">
+                <input
+                  type="text"
+                  name="race"
+                  class="form-style"
+                  placeholder="raza"
+                  id="race"
+                  autocomplete="off"
+                  formControlName="race"
+                />
+
+              </div>
+              <div class="form-group mt-2">
+                <input
+                  type="textarea"
+                  name="descripción"
+                  class="form-style"
+                  placeholder="description"
+                  id="description"
+                  autocomplete="off"
+                  formControlName="description"
+                />
+              </div>
+
+              <button type="submit" class="btn mt-4">Entrar</button>
+            </form>
+
+            <p class="mb-0 mt-4 text-center">
+              <a class="link">Perdiste la contraseña?</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

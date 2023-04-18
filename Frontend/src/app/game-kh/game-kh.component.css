@@ -1,0 +1,15 @@
+.fader {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 82vh;
+
+  }
+  
+  /* Estilos para el div centrado */
+  .mi-div {
+    width: 80%;
+    max-width: 800px; /* Establece un ancho máximo para el div */
+  }
