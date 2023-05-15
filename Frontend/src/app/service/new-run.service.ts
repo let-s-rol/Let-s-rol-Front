@@ -19,7 +19,7 @@ export class newRunService {
 
   newRunData: any;
 
-  addNewRun (newRun: NewRun, gameId: number) {
+  addNewRun (newRun: NewRun, gameId: number, ) {
     console.log('Payload:', newRun); // Log the payload before making the request
 
 
