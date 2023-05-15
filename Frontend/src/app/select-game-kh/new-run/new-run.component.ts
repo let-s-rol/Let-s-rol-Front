@@ -17,7 +17,6 @@ export class NewRunComponent implements OnInit {
 
       run_name: new FormControl('', [Validators.required, Validators.minLength(3)]),
       run_description: new FormControl('', []),
-      run_password: new FormControl('', [Validators.required, Validators.minLength(4)]),
 
     });
 
