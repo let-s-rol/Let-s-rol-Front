@@ -26,6 +26,15 @@
           formControlName="run_description" required />
       </div>
 
+            <!-- password -->
+            <div class="form_field">
+              <label for="run_password"><svg class="icon">
+                  <use xlink:href="#icon-user"></use>
+                </svg><span class="hidden">Contraseña</span></label>
+              <input id="run_password" type="text" name="run_password" class="form_input" placeholder="Contraseña"
+                formControlName="run_password" required />
+            </div>
+
       <div class="form_field">
         <input type="submit" [disabled]="!newRun.valid">
 
