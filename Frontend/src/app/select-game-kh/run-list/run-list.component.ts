@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Run } from '../../inferfaces/run';
+import { WantToEnterRankingServiceService } from '../../want-to-enter-ranking-service.service'
 
 @Component({
   selector: 'app-run-list',
@@ -11,11 +13,23 @@ export class RunListComponent implements OnInit {
 
   NewImg: string = this.rute + this.getRandomInt() + ').svg';
 
-  constructor() {}
+  runs!: Run [];
+
+  constructor( private wantToEnterRankingService: WantToEnterRankingServiceService) {
+    
+  }
 
   getRandomInt() {
     return Math.floor(Math.random() * 10);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.wantToEnterRankingService.getRuns().subscribe(
+      (response: Run[]) => {
+        this.runs = response;
+        console.log(response);
+      }
+    );
+
+  }
 }

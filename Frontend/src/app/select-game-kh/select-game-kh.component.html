@@ -12,34 +12,38 @@
     <!-- Lista de runs -->
   </div>
   <div class="container-flex">
-
-        <div
-          style="width: 270px"
-          class=""
-          [formGroup]="sendCode"
-          (submit)="searchNewRanking()"
-        >
-          <div class="input-group">
-            <!-- Campo de texto para ingresar el código de búsqueda -->
-            <input
-              type="text"
-              id="code"
-              class="code text-muted form-control input-group"
-              placeholder="Entra el Código"
-              aria-label="Escribe algo aquí"
-              aria-describedby="basic-addon2"
-              formControlName="code"
-            />
-            <div class="input-group-append">
-              <!-- Botón para enviar el formulario de búsqueda -->
-              <button type="submit" class="ms-3 me-3 p-3 btn btn-secondary">
-                Buscar
-              </button>
-            </div>
-          </div>
+    <form
+      style="width: 270px"
+      class=""
+      [formGroup]="sendCode"
+      (submit)="searchNewRanking()"
+    >
+      <div class="input-group">
+        <!-- Campo de texto para ingresar el código de búsqueda -->
+        <input
+          type="text"
+          id="run_password"
+          class="run_password text-muted form-control input-group"
+          placeholder="Entra el Código"
+          aria-label="Escribe algo aquí"
+          aria-describedby="basic-addon2"
+          formControlName="run_password"
+        />
+        <div class="input-group-append">
+          <!-- Botón para enviar el formulario de búsqueda -->
+          <button type="submit" class="ms-3 me-3 p-3 btn btn-secondary">
+            Buscar
+          </button>
         </div>
       </div>
+    </form>
+  </div>
 
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
   <!--
         TODO hacer input para pasar json con la información de la run

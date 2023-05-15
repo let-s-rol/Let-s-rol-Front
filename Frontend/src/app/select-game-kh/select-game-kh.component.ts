@@ -16,7 +16,7 @@ export class SelectGameKHComponent implements OnInit {
     private wantToEnterRankingService: WantToEnterRankingServiceService
   ) {
     this.sendCode = new FormGroup({
-      code: new FormControl('', []),
+      run_password: new FormControl('', []),
     });
     const UserJSON: string = `{
         "runs": [
