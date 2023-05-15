@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Run } from '../inferfaces/run';
+import { WantToEnterRankingServiceService } from '../want-to-enter-ranking-service.service';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-select-game-kh',
@@ -8,8 +10,14 @@ import { Run } from '../inferfaces/run';
 })
 export class SelectGameKHComponent implements OnInit {
   cards: Run[];
+  sendCode: FormGroup;
 
-  constructor() {
+  constructor(
+    private wantToEnterRankingService: WantToEnterRankingServiceService
+  ) {
+    this.sendCode = new FormGroup({
+      code: new FormControl('', []),
+    });
     const UserJSON: string = `{
         "runs": [
           { 
@@ -20,7 +28,7 @@ export class SelectGameKHComponent implements OnInit {
            "description": "una gean Partida con illojuan"
 
         } ,
-          
+
           { 
 
             "name" : "xavi te falta calle",
@@ -43,6 +51,11 @@ export class SelectGameKHComponent implements OnInit {
 
     const userDict: any = JSON.parse(UserJSON);
     this.cards = userDict['runs'];
+  }
+  searchNewRanking() {
+    console.log(this.sendCode.value);
+    const code = this.sendCode.value;
+    this.wantToEnterRankingService.sendCode(this.sendCode.value);
   }
 
   ngOnInit(): void {}

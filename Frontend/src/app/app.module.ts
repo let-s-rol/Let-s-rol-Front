@@ -20,6 +20,7 @@ import { NavLinkSonComponent } from './navbar/nav-link-son/nav-link-son.componen
 import { NewRunComponent } from './select-game-kh/new-run/new-run.component';
 import { GameKhComponent } from './game-kh/game-kh.component';
 import { NewCharacterPannelComponent } from './game-kh/new-character-pannel/new-character-pannel.component';
+import { ChatComponent } from './game-kh/chat/chat.component';
 
 
 
@@ -39,6 +40,7 @@ import { NewCharacterPannelComponent } from './game-kh/new-character-pannel/new-
     NewRunComponent,
     GameKhComponent,
     NewCharacterPannelComponent,
+    ChatComponent,
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
