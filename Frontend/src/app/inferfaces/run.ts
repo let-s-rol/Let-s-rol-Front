@@ -1,6 +1,8 @@
 export interface Run {
-    name: string;
+    run_name: string;
     id: number;
     idGame:number,
-    description:string;
+    run_description:string;
+    password : string;
+
   }

@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'selectGame', component: SelectGameKHComponent},
   { path: 'newRun', component: NewRunComponent},
   { path: 'baseCharacter', component: CharacterBaseComponent},
-  { path: 'gamekh', component: GameKhComponent},
+  { path: 'gamekh/:id', component: GameKhComponent},
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 ];
 

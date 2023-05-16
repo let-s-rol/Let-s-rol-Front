@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Run } from '../inferfaces/run';
 import { WantToEnterRankingServiceService } from '../want-to-enter-ranking-service.service';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-select-game-kh',
@@ -10,11 +11,12 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SelectGameKHComponent implements OnInit {
   cards: Run[];
-  runs!: Run [];
+  runs!: Run[];
   sendCode: FormGroup;
 
   constructor(
-    private wantToEnterRankingService: WantToEnterRankingServiceService
+    private wantToEnterRankingService: WantToEnterRankingServiceService,
+    private router: Router
   ) {
     this.sendCode = new FormGroup({
       run_password: new FormControl('', []),
@@ -58,15 +60,15 @@ export class SelectGameKHComponent implements OnInit {
     const code = this.sendCode.value;
     this.wantToEnterRankingService.sendCode(this.sendCode.value);
   }
+  redirectToGame(inputValue : Run) { //TODO cambiar valor
+    this.router.navigate(['/gamekh'], { queryParams: { inputValue: inputValue } });
+  }
+  
 
   ngOnInit(): void {
-
-    this.wantToEnterRankingService.getRuns().subscribe(
-      (response: Run[]) => {
-        this.runs = response;
-        console.log(response);
-    
-      }
-    );
+    this.wantToEnterRankingService.getRuns().subscribe((response: Run[]) => {
+      this.runs = response;
+      console.log(response);
+    });
   }
 }
