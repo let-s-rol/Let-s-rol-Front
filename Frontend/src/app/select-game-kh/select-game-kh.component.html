@@ -45,17 +45,11 @@
   <br />
   <br />
 
-<<<<<<< HEAD
-  <div *ngFor="let eq of runs" class="m-xxl-5 row justify-content-center">
-    <div [routerLink]="['/gamekh', eq.id]" class="col-auto">
-      <app-run-list [inputValue]="eq"></app-run-list>
-=======
   <div class="m-xxl-5 d-flex flex-wrap justify-content-center">
     <div *ngFor="let eq of runs" class="col-auto">
-      <div [routerLink]="['/gamekh']">
+      <div [routerLink]="['/gamekh', eq.id]">
         <app-run-list [inputValue]="eq"></app-run-list>
       </div>
->>>>>>> 0c90e30dec0dbf778336f78cce9c12118eb05fd1
     </div>
   </div>
   
