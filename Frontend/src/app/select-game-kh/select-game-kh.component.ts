@@ -10,6 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class SelectGameKHComponent implements OnInit {
   cards: Run[];
+  runs!: Run [];
   sendCode: FormGroup;
 
   constructor(
@@ -58,5 +59,14 @@ export class SelectGameKHComponent implements OnInit {
     this.wantToEnterRankingService.sendCode(this.sendCode.value);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.wantToEnterRankingService.getRuns().subscribe(
+      (response: Run[]) => {
+        this.runs = response;
+        console.log(response);
+    
+      }
+    );
+  }
 }

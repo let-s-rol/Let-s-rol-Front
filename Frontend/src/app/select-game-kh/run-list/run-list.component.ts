@@ -24,12 +24,7 @@ export class RunListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.wantToEnterRankingService.getRuns().subscribe(
-      (response: Run[]) => {
-        this.runs = response;
-        console.log(response);
-      }
-    );
+
 
   }
 }
