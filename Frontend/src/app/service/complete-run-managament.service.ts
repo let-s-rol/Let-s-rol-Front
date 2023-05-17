@@ -67,7 +67,20 @@ fullCharData : any;
       tap((response) => console.log('Response from back-end:', response))
     );
 
-
   }
+
+
+  getBaseCharacters() {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+    });
+
+    return this._http
+      .get<FullCharacter[]>(this.Url + 'showBaseCharacter', { headers, withCredentials: true,})
+      .pipe(tap((rankings) => console.log(rankings)));
+  }
+
+
 
 }
