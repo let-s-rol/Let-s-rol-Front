@@ -31,7 +31,7 @@ export class CharactersService {
     console.log(this.Url + 'base-character');
     
 
-    return this._http.post(this.Url + 'base-character', baseCharacter, { headers } )
+    return this._http.post(this.Url + 'baseCharacter', baseCharacter, { headers } )
       .toPromise()
       .then(response => {
         console.log(response);

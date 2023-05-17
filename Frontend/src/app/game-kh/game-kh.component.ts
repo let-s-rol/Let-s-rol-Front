@@ -12,6 +12,7 @@ export class GameKhComponent implements OnInit {
   // TODO hacer enlace
   createCharacter: boolean = true;
   character!: FullCharacter[];
+  baseCharacter!: FullCharacter[];
   
   characterName!:string;
 
@@ -32,7 +33,7 @@ export class GameKhComponent implements OnInit {
       }
       console.log('ID from route params:', id);
       this.CompleteRunManagamentService.getCharacterTable(id).subscribe(
-        (response) => {
+        (response: FullCharacter[]) => {
           this.character = response;
           this.characterName= this.character[0].name;
           console.log('Character: ', this.character);
@@ -47,6 +48,18 @@ export class GameKhComponent implements OnInit {
         }
       );
     });
+
+
+    this.CompleteRunManagamentService.getBaseCharacters().subscribe(
+      (response: FullCharacter[]) => {
+        this.baseCharacter = response;
+      });
+
+      console.log('Personajes Base: ', this.baseCharacter);
+      
+
+
+
   }
 
   proofCharacterExist() {}
