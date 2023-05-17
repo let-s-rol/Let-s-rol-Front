@@ -7,8 +7,13 @@
         <div class="center-wrap">
           <div class="section text-center">
             <h4 class="mb-4 text-light pb-3">Crear personaje</h4>
-
-            <form (ngSubmit)="login()" [formGroup]="loginForm">
+            <select class="form-group form-style">
+              <option   value="opcion1">Opción 1</option>
+              <option value="opcion2">Opción 2</option>
+              <option value="opcion3">Opción 3</option>
+            </select>
+            
+            <form (ngSubmit)="send()" [formGroup]="character">
               <div class="form-group mt-2">
                 <input
                   type="text"

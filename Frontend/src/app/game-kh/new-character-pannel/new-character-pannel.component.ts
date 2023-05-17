@@ -12,35 +12,22 @@ export class NewCharacterPannelComponent implements OnInit {
 
   token: any = "token";
   binding: any = false;
-  user: FormGroup;
-  loginForm: FormGroup;
+  character: FormGroup;
   regLog = false;
 
 
 
   constructor(public router: Router) {
-    this.user = new FormGroup({
-      nick: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
-    });
+    this.character = new FormGroup({
+      name: new FormControl('', [Validators.required]),
+      race: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
 
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6),
-      ]),
     });
   }
+
+
   send(): any {
-   
-  }
-
-  login(): any {
 
   }
 
