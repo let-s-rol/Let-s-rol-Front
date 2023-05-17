@@ -35,9 +35,8 @@ export class GameKhComponent implements OnInit {
       this.CompleteRunManagamentService.getCharacterTable(id).subscribe(
         (response: FullCharacter[]) => {
           this.character = response;
-          this.characterName= this.character[0].name;
           console.log('Character: ', this.character);
-          console.log('Name', this.characterName);
+          console.log('Name', this.character[0].name);
           
           if (this.character[0] && this.character[0].name !== null && this.character[0].name !== undefined) {
             console.log('El Nombre:', this.character[0].name);
@@ -53,9 +52,11 @@ export class GameKhComponent implements OnInit {
     this.CompleteRunManagamentService.getBaseCharacters().subscribe(
       (response: FullCharacter[]) => {
         this.baseCharacter = response;
+        console.log('Personajes Base: ', this.baseCharacter);
+        console.log('Personajes Base Nombre: ', this.baseCharacter[0].name);
       });
 
-      console.log('Personajes Base: ', this.baseCharacter);
+
       
 
 
