@@ -24,20 +24,21 @@ export class GameKhComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Obtiene el ranking de estudiantes del servidor a través del servicio InputService/StudentRankingManagament
+
+    //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
     this.route.params.subscribe((params) => {
       let id = Number.parseInt(params['id']);
       if (Number.isNaN(id)) {
         console.error('Invalid id:', params['id']);
         return;
       }
+
+      //GET CON EL CONTENIDO DEL PERSONAJE COMPLETO
       console.log('ID from route params:', id);
       this.CompleteRunManagamentService.getCharacterTable(id).subscribe(
         (response: FullCharacter[]) => {
           this.character = response;
-          this.characterName= this.character[0].name;
           console.log('Character: ', this.character);
-          console.log('Name', this.characterName);
           
           if (this.character[0] && this.character[0].name !== null && this.character[0].name !== undefined) {
             console.log('El Nombre:', this.character[0].name);
@@ -47,20 +48,17 @@ export class GameKhComponent implements OnInit {
           }
         }
       );
+
     });
 
 
-    this.CompleteRunManagamentService.getBaseCharacters().subscribe(
-      (response: FullCharacter[]) => {
-        this.baseCharacter = response;
-      });
+ 
 
-      console.log('Personajes Base: ', this.baseCharacter);
+
       
 
 
 
   }
 
-  proofCharacterExist() {}
 }
