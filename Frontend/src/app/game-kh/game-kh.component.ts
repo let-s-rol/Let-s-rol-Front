@@ -13,8 +13,10 @@ export class GameKhComponent implements OnInit {
   createCharacter: boolean = true;
   character!: FullCharacter[];
   baseCharacter!: FullCharacter[];
-  
-  characterName!:string;
+
+  characterName!: string;
+
+
 
   constructor(
     private CompleteRunManagamentService: CompleteRunManagamentService,
@@ -24,7 +26,6 @@ export class GameKhComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-
     //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
     this.route.params.subscribe((params) => {
       let id = Number.parseInt(params['id']);
@@ -39,26 +40,21 @@ export class GameKhComponent implements OnInit {
         (response: FullCharacter[]) => {
           this.character = response;
           console.log('Character: ', this.character);
-          
-          if (this.character[0] && this.character[0].name !== null && this.character[0].name !== undefined) {
+          if (
+            this.character[0] &&
+            this.character[0].name !== null &&
+            this.character[0].name !== undefined
+          ) {
             console.log('El Nombre:', this.character[0].name);
             this.createCharacter = false;
           } else {
-            console.log('Name property does not exist or has null/undefined value');
+            console.log(
+              'Name property does not exist or has null/undefined value'
+            );
           }
         }
       );
-
     });
-
-
- 
-
-
-      
-
-
-
   }
 
 }
