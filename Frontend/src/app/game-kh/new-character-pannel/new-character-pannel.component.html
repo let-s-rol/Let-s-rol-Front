@@ -8,11 +8,12 @@
           <div class="section text-center">
             <h4 class="mb-4 text-light pb-3">Crear personaje</h4>
             <select class="form-group form-style">
-              <option   value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="">Personajes Creado</option>
+              <option *ngFor="let eq of baseCharacter" [value]="eq.name">
+                {{ eq.name }}
+              </option>
             </select>
-            
+
             <form (ngSubmit)="send()" [formGroup]="character">
               <div class="form-group mt-2">
                 <input
@@ -24,7 +25,6 @@
                   autocomplete="off"
                   formControlName="name"
                 />
-
               </div>
               <div class="form-group mt-2">
                 <input
@@ -36,7 +36,6 @@
                   autocomplete="off"
                   formControlName="race"
                 />
-
               </div>
               <div class="form-group mt-2">
                 <input
