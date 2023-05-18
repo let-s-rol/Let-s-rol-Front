@@ -21,6 +21,9 @@ import { NewRunComponent } from './select-game-kh/new-run/new-run.component';
 import { GameKhComponent } from './game-kh/game-kh.component';
 import { NewCharacterPannelComponent } from './game-kh/new-character-pannel/new-character-pannel.component';
 import { ChatComponent } from './game-kh/chat/chat.component';
+import { GestorKHComponent } from './gestor-kh/gestor-kh.component';
+import { GestorKHNavComponent } from './gestor-khnav/gestor-khnav.component';
+import { GestorKHasideComponent } from './gestor-khaside/gestor-khaside.component';
 
 
 
@@ -41,6 +44,9 @@ import { ChatComponent } from './game-kh/chat/chat.component';
     GameKhComponent,
     NewCharacterPannelComponent,
     ChatComponent,
+    GestorKHComponent,
+    GestorKHNavComponent,
+    GestorKHasideComponent,
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],

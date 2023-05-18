@@ -17,19 +17,33 @@ fullCharData : any;
 
   constructor(private _http: HttpClient) { }
 
-  addFullCharacter () {
-    console.log('Payload:', ); // Log the payload before making the request
+  URLid!: number;
+  // character!: FullCharacter;
+
+
+
+  addFullCharacter(character: FullCharacter, URLid: number) {
+    console.log('Payload:', character);
 
 
     const token = localStorage.getItem('access_token');
-    console.log('Token:', token); // Log token value
     const headers = { Authorization: `Bearer ${token}` };
-    console.log(localStorage);
-    
 
-    return this._http.post(this.Url + 'createFullCharacter', { headers } )
+
+    const body = {
+      id_run: URLid,
+      name: character.name,
+      race: character.race,
+      description: character.description,
+    };
+ 
+
+    console.log('Payload:', body); // Log the payload before making the request
+
+    return this._http
+      .put(this.Url + 'createFullCharacter', body, { headers })
       .toPromise()
-      .then(response => {
+      .then((response) => {
         console.log(response);
 
         let found = false;
@@ -40,12 +54,10 @@ fullCharData : any;
         this.fullCharData = response;
         return found;
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         return false;
       });
-    
-
   }
 
   getCharacterTable (id_run:number) {

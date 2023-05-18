@@ -36,7 +36,7 @@ export class NewCharacterPannelComponent implements OnInit {
     });
   }
 
-  send(): any {}
+
 
   checkCheckbox() {
     // TODO hacer que cambie el check entre registro y login
@@ -75,5 +75,24 @@ console.log(event.target.value);
       this.description = '';
       console.log('No se encontró ninguna opción con el nombre seleccionado.');
     }
+  }
+
+  send(): any {
+
+    let URLid: number = 0;
+
+            //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
+            this.route.params.subscribe((params) => {
+              let URLid = Number.parseInt(params['id']);
+              if (Number.isNaN(URLid)) {
+                console.error('Invalid id:', params['id']);
+                return;
+              }
+              
+
+    this.CompleteRunManagamentService.addFullCharacter(this.character.value, URLid)
+    console.log('Id por URL', URLid);
+  });
+    
   }
 }

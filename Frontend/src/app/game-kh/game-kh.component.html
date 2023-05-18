@@ -1,7 +1,23 @@
-<app-navbar></app-navbar>
+<div class="body">
+  <header><app-navbar></app-navbar></header>
 
-<div *ngIf="createCharacter">
-  <app-new-character-pannel></app-new-character-pannel>
+  <nav>
+    <app-gestor-khnav></app-gestor-khnav>
+  </nav>
+
+  <section>
+    <div *ngIf="createCharacter">
+      <app-new-character-pannel></app-new-character-pannel>
+    </div>
+
+    <div *ngIf="!createCharacter">
+      <app-gestor-kh></app-gestor-kh>
+    </div>
+  </section>
+
+  <aside>
+    <app-gestor-khaside></app-gestor-khaside>
+  </aside>
+
+  <!-- <app-chat></app-chat> -->
 </div>
-
-<!-- <app-chat></app-chat> -->

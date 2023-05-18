@@ -1,15 +1,33 @@
-.fader {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 82vh;
+.body {
+  font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue,
+    Helvetica, sans-serif;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav section aside"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 50px;
+  grid-template-columns: 15% 1fr 18%;
+  height: 100vh;
+}
 
-  }
-  
-  /* Estilos para el div centrado */
-  .mi-div {
-    width: 80%;
-    max-width: 800px; /* Establece un ancho máximo para el div */
-  }
+header {
+
+  grid-area: header;
+}
+
+nav {
+  background: #c9bfbf;
+  grid-area: nav;
+}
+
+section {
+  background: #ababab;
+  grid-area: section;
+}
+
+aside {
+  background: #c9c9c9;
+  grid-area: aside;
+}
+
