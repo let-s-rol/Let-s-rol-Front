@@ -1,0 +1,25 @@
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .image-button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0 10px; /* Ajusta el valor para la separación entre botones */
+    transition: transform 0.3s ease;
+    width: 80px; /* Ajusta el ancho del botón */
+    height: 80px; /* Ajusta la altura del botón */
+  }
+  
+  .image-button img {
+    width: 100%; /* Ajusta el tamaño de la imagen al 100% del botón */
+    height: 100%; /* Ajusta el tamaño de la imagen al 100% del botón */
+  }
+  
+  .image-button:hover {
+    transform: scale(1.1); /* Ajusta el valor para el nivel de escala */
+  }
+  

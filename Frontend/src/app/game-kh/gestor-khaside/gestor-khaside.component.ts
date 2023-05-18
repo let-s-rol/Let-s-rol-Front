@@ -28,7 +28,7 @@ export class GestorKHasideComponent implements OnInit {
     { "id": 4, "text": "No dudes en preguntar." },
     { "id": 4, "text": "No dudes en preguntar." },
     { "id": 4, "text": "No dudes en preguntar." },
-    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No jkhalksdja ahsldkh  haslkhjd  ahsh  ha ha ah jj js ljhlkjhkjhd l jh jh ." },
     { "id": 5, "text": "¡Que tengas un excelente día!" }
   ];
 
