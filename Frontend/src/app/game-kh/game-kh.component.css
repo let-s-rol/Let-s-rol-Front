@@ -17,17 +17,15 @@ header {
 }
 
 nav {
-  background: #c9bfbf;
+ 
   grid-area: nav;
 }
 
 section {
-  background: #ababab;
   grid-area: section;
 }
 
 aside {
-  background: #c9c9c9;
   grid-area: aside;
 }
 

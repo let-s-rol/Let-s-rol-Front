@@ -1,1 +1,12 @@
-<p>gestor-khaside works!</p>
+<div class="container">
+    <ul>
+      <li *ngFor="let message of messages" [ngClass]="{
+        'bold': message.id === 1,
+        'italic': message.id === 2,
+        'bold-italic': message.id === 3
+      }">
+        {{ message.text }}
+      </li>
+    </ul>
+  </div>
+  

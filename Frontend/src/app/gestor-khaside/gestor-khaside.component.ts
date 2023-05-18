@@ -7,6 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestorKHasideComponent implements OnInit {
 
+
+  messages: any[] = [
+    { "id": 1, "text": "¡Hola! ¿Cómo estás?" },
+    { "id": 2, "text": "Me alegra verte por aquí." },
+    { "id": 3, "text": "¿Necesitas ayuda con algo?" },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 4, "text": "No dudes en preguntar." },
+    { "id": 5, "text": "¡Que tengas un excelente día!" }
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {
