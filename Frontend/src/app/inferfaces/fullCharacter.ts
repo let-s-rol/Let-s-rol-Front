@@ -9,6 +9,7 @@ export interface FullCharacter {
     race: string;
     description: string;
     player_lvl: number;
+    player_hp: number;
     player_exp: number;
     player_platines: number;
     player_init: number;
