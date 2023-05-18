@@ -49,7 +49,7 @@ export class NewCharacterPannelComponent implements OnInit {
       (response: FullCharacter[]) => {
         this.baseCharacter = response;
         console.log('Personajes Base: ', this.baseCharacter);
-        console.log('Personajes Base Nombre: ', this.baseCharacter[0].name);
+        
       }
     );
   }
@@ -91,7 +91,7 @@ console.log(event.target.value);
               
 
     this.CompleteRunManagamentService.addFullCharacter(this.character.value, URLid)
-    console.log('Id por URL', URLid);
+    
   });
     
   }

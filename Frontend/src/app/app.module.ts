@@ -24,7 +24,6 @@ import { ChatComponent } from './game-kh/chat/chat.component';
 import { GestorKHComponent } from './game-kh/gestor-kh/gestor-kh.component';
 import { GestorKHNavComponent } from './game-kh/gestor-khnav/gestor-khnav.component';
 import { GestorKHasideComponent } from './game-kh/gestor-khaside/gestor-khaside.component';
-import { GestorKHNavbarComponent } from './gestor-khnavbar/gestor-khnavbar.component';
 
 
 
@@ -48,7 +47,6 @@ import { GestorKHNavbarComponent } from './gestor-khnavbar/gestor-khnavbar.compo
     GestorKHComponent,
     GestorKHNavComponent,
     GestorKHasideComponent,
-    GestorKHNavbarComponent,
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
