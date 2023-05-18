@@ -55,10 +55,14 @@ export class NewCharacterPannelComponent implements OnInit {
   }
   actualizarValores(event: any) {
 
-    const seleccionado = this.baseCharacter.find(
+console.log(event.target.value);
+
+    let seleccionado = this.baseCharacter.find(
       (opcionSeleccionada) => opcionSeleccionada === opcionSeleccionada
     );
 
+    console.log(seleccionado);
+    
 
     if (seleccionado) {
       this.name = seleccionado.name;
@@ -66,6 +70,9 @@ export class NewCharacterPannelComponent implements OnInit {
       this.description = seleccionado.description;
       console.log(this.name, this.race, this.description);
     } else {
+      this.name = '';
+      this.race = '';
+      this.description = '';
       console.log('No se encontró ninguna opción con el nombre seleccionado.');
     }
   }
