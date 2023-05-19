@@ -1,11 +1,13 @@
-<div class="button-group">
-  <button class="image-button">
-    <img src="../../../assets/navkh/mochila.png" alt="Bolsa" />
-  </button>
-  <button class="image-button">
-    <img src="../../../assets/navkh/espada.png" alt="Ataque" />
-  </button>
-  <button class="image-button">
-    <img src="../../../assets/navkh/tienda.png" alt="Tienda" />
-  </button>
+<app-navbar-gestor-kh
+  (valorEnviado)="recibirValor($event)"
+></app-navbar-gestor-kh>
+
+<div *ngIf="status === 'bag'">
+  <app-bag></app-bag>
+</div>
+<div *ngIf="status === 'battle'">
+  <app-battle></app-battle>
+</div>
+<div *ngIf="status === 'shop'">
+  <app-shop></app-shop>
 </div>

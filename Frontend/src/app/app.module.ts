@@ -26,6 +26,10 @@ import { GestorKHNavComponent } from './game-kh/gestor-khnav/gestor-khnav.compon
 import { GestorKHasideComponent } from './game-kh/gestor-khaside/gestor-khaside.component';
 import { ShowCharacterInfoComponent } from './game-kh/show-character-info/show-character-info.component';
 import { ShowCharacterInfoLeftComponent } from './game-kh/show-character-info-left/show-character-info-left.component';
+import { NavbarGestorKhComponent } from './game-kh/gestor-kh/navbar-gestor-kh/navbar-gestor-kh.component';
+import { BagComponent } from './game-kh/gestor-kh/bag/bag.component';
+import { BattleComponent } from './game-kh/gestor-kh/battle/battle.component';
+import { ShopComponent } from './game-kh/gestor-kh/shop/shop.component';
 
 
 
@@ -50,7 +54,11 @@ import { ShowCharacterInfoLeftComponent } from './game-kh/show-character-info-le
     GestorKHNavComponent,
     GestorKHasideComponent,
     ShowCharacterInfoComponent,
-    ShowCharacterInfoLeftComponent
+    ShowCharacterInfoLeftComponent,
+    NavbarGestorKhComponent,
+    BagComponent,
+    BattleComponent,
+    ShopComponent
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
