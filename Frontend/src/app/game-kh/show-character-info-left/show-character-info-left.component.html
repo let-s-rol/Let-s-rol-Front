@@ -1,8 +1,9 @@
-<div class="card" >
+
+  <div class="card" *ngFor="let char of character">
     <div class="card-body">
-      <h5 class="card-title">{{ character[0].player_agi }}</h5>
-      <p class="card-text">Level: {{ character[0].player_str }}</p>
-      <p class="card-text">Race: {{ character[0].player_mag }}</p>
-      <p class="card-text">Life: {{ character[0].player_hp}}</p>
+      <h5 class="card-title">{{ char.player_agi }}</h5>
+      <p class="card-text">Nivel: {{ char.player_str }}</p>
+      <p class="card-text">Raza: {{ char.player_mag }}</p>
+      <p class="card-text">Platines: {{ char.player_hp }}</p>
     </div>
   </div>
