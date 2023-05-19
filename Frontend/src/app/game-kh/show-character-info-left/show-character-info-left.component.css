@@ -56,8 +56,12 @@
     display: inline-block;
     margin-right: 5px;
   }
+
+  .card-text .label.agility {
+    background-color: #ce5a0e;
+  }
   
-  .card-text .label.ability {
+  .card-text .label.strength {
     background-color: #d14040;
   }
   
@@ -69,7 +73,5 @@
     background-color: #5a843e;
   }
   
-  .card-text .label.speed {
-    background-color: #ce5a0e;
-  }
+
   
