@@ -53,4 +53,9 @@
     background-color: #555555;
   }
   
+  .message-sender {
+    font-weight: bold;
+    color: #333333;
+    margin-right: 5px;
+  }
   
