@@ -20,6 +20,8 @@ fullCharData : any;
   URLid!: number;
   // character!: FullCharacter;
 
+  compraDatos: any;
+
 
 
   addFullCharacter(character: FullCharacter, URLid: number) {
@@ -94,5 +96,46 @@ fullCharData : any;
   }
 
 
+  buyCardPack(id_player_character: number, tipo:string) {
 
-}
+
+    const token = localStorage.getItem('access_token');
+    const headers = { Authorization: `Bearer ${token}` };
+    
+    console.log('Payload: ' + id_player_character, ', ', tipo);
+    console.log('Token: ', headers);
+
+
+    
+    
+
+    return this._http.put(this.Url + `buyAndInsertOnInventory/${tipo}/${id_player_character}`, {}, {
+      headers,
+      withCredentials: true
+    })
+    
+    .toPromise()
+    .then((response) => {
+      console.log(response);
+
+      let found = false;
+      if (response != null) {
+        found = true;
+      }
+
+      this.compraDatos = response;
+      return found;
+    })
+    .catch((error) => {
+      console.log(error);
+      return false;
+    });
+    
+  
+  }
+
+  }
+
+
+
+
