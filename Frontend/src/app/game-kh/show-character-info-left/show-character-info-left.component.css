@@ -1,15 +1,75 @@
 .card {
-
+    position: fixed;
     top: 9%;
-
-    position:fixed;
     left: 20px;
     width: 400px;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: transparent;
     border-radius: 10px;
-    border: 2px solid #333333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-
+    border: none;
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
   }
+  
+  .card h5 {
+    font-size: 20px;
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  .card p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  .card-text {
+    margin-bottom: 10px;
+  }
+  
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
+  
+  .card-text span {
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  .card-text .value {
+    color: #ffc93c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: none;
+  }
+  
+  .card-text .label {
+    color: #ffffff;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    outline: 2px solid #2b2b2b;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .card-text .label.ability {
+    background-color: #d14040;
+  }
+  
+  .card-text .label.magic {
+    background-color: #2469b8;
+  }
+  
+  .card-text .label.defense {
+    background-color: #5a843e;
+  }
+  
+  .card-text .label.speed {
+    background-color: #ce5a0e;
+  }
+  
