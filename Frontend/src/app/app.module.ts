@@ -26,7 +26,6 @@ import { GestorKHNavComponent } from './game-kh/gestor-khnav/gestor-khnav.compon
 import { GestorKHasideComponent } from './game-kh/gestor-khaside/gestor-khaside.component';
 import { ShowCharacterInfoComponent } from './game-kh/show-character-info/show-character-info.component';
 import { ShowCharacterInfoLeftComponent } from './game-kh/show-character-info-left/show-character-info-left.component';
-import { GestorFalseChatComponent } from './game-kh/gestor-false-chat/gestor-false-chat.component';
 
 
 
@@ -51,8 +50,7 @@ import { GestorFalseChatComponent } from './game-kh/gestor-false-chat/gestor-fal
     GestorKHNavComponent,
     GestorKHasideComponent,
     ShowCharacterInfoComponent,
-    ShowCharacterInfoLeftComponent,
-    GestorFalseChatComponent
+    ShowCharacterInfoLeftComponent
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,FormsModule],
