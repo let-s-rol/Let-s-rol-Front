@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -26,10 +26,6 @@ import { GestorKHNavComponent } from './game-kh/gestor-khnav/gestor-khnav.compon
 import { GestorKHasideComponent } from './game-kh/gestor-khaside/gestor-khaside.component';
 import { ShowCharacterInfoComponent } from './game-kh/show-character-info/show-character-info.component';
 import { ShowCharacterInfoLeftComponent } from './game-kh/show-character-info-left/show-character-info-left.component';
-import { NavbarGestorKhComponent } from './game-kh/gestor-kh/navbar-gestor-kh/navbar-gestor-kh.component';
-import { BagComponent } from './game-kh/gestor-kh/bag/bag.component';
-import { BattleComponent } from './game-kh/gestor-kh/battle/battle.component';
-import { ShopComponent } from './game-kh/gestor-kh/shop/shop.component';
 
 
 
@@ -54,14 +50,10 @@ import { ShopComponent } from './game-kh/gestor-kh/shop/shop.component';
     GestorKHNavComponent,
     GestorKHasideComponent,
     ShowCharacterInfoComponent,
-    ShowCharacterInfoLeftComponent,
-    NavbarGestorKhComponent,
-    BagComponent,
-    BattleComponent,
-    ShopComponent
+    ShowCharacterInfoLeftComponent
 
   ],
-  imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,],
+  imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

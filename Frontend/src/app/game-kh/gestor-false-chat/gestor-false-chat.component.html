@@ -1,0 +1,13 @@
+<app-show-character-info-left></app-show-character-info-left>
+
+<div class="chat-container">
+    <div *ngFor="let message of userMessages" class="message">
+      <span>{{ message }}</span>
+    </div>
+  </div>
+  
+  <div>
+    <input class="input-text"  type="text" [(ngModel)]="userInput" placeholder="Type your message">
+    <button class="button" (click)="saveUserMessage()">Send</button>
+  </div>
+  
