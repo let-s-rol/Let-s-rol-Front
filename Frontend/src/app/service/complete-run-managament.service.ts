@@ -134,6 +134,55 @@ fullCharData : any;
   
   }
 
+
+  saveMessage(idRun: number, message: string) {
+    const url = `${this.Url}SaveHistorial/${idRun}/messages`;
+    const body = { message };
+  
+    const token = localStorage.getItem('access_token');
+    const headers = { Authorization: `Bearer ${token}` };
+  
+    console.log('Payload:', body); // Log the payload before making the request
+  
+    return this._http.post(url, body, { headers })
+      .toPromise()
+      .then((response) => {
+        console.log(response);
+  
+        let success = false;
+        if (response != null) {
+          success = true;
+        }
+  
+        return success;
+      })
+      .catch((error) => {
+        console.log(error);
+        return false;
+      });
+  }
+
+  getMessages(idRun: number) {
+    const url = `${this.Url}GetHistorial/${idRun}/messages`;
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+    });
+  
+    return this._http.get<any>(url, { headers, withCredentials: true })
+      .toPromise()
+      .then((response) => {
+        console.log(response);
+        return response.messages;
+      })
+      .catch((error) => {
+        console.log(error);
+        return [];
+      });
+  }
+  
+
   }
 
 

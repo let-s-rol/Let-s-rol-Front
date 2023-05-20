@@ -1,14 +1,10 @@
 <app-show-character-info></app-show-character-info>
 
 <div class="container">
-    <ul>
-      <li *ngFor="let message of messages" [ngClass]="{
-        'bold': message.id === 1,
-        'italic': message.id === 2,
-        'bold-italic': message.id === 3
-      }">
-        {{ message.text }}
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li *ngFor="let message of messages">
+      {{ message }}
+    </li>
+  </ul>
+</div>
   
