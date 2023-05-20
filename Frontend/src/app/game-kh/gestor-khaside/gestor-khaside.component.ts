@@ -28,6 +28,7 @@ export class GestorKHasideComponent implements OnInit {
         console.error('Invalid id:', params['id']);
         return;
       }
+      
 
       //GET CON EL CONTENIDO DEL PERSONAJE COMPLETO
       console.log('ID from route params:', id);

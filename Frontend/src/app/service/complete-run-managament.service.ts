@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { FullCharacter } from '../inferfaces/fullCharacter';
 
 @Injectable({
@@ -180,6 +180,21 @@ fullCharData : any;
         console.log(error);
         return [];
       });
+  }
+
+
+  getInventory(idPlayerCharacter: number, idRun: number): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+    });
+  
+    const options = {
+      headers,
+      withCredentials: true,
+    };
+  
+    return this._http.get<any>(`${this.Url}getInventory/${idPlayerCharacter}/${idRun}`, options);
   }
   
 
