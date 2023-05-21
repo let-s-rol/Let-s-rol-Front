@@ -1,6 +1,9 @@
 @use postcss-preset-env {
     stage: 0;
   }
+
+
+  
   
   /* config.css */
   
@@ -14,6 +17,7 @@
     display: grid;
     place-items: center;
   }
+
   
   .grid {
     inline-size: 90%;
@@ -84,6 +88,16 @@
     line-height: var(--bodyLineHeight);
     margin: 0;
     min-block-size: 100vh;
+  }
+
+  
+  .title {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
   }
   
   /* modules/anchor.css */

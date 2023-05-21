@@ -1,12 +1,12 @@
 <div class="wrapper">
-  <button [routerLink]="['selectGame']" *ngFor="let eq of cards" class="cards">
+  <ng-container *ngFor="let eq of cards">
+    <button *ngIf="eq.online" class="cards" [routerLink]="['selectGame']">
 
-    <!-- <div style="background-image: url(eq.img_background)" class="card__image"> -->
-      <div  [ngStyle]="{'background-image': 'url(' + eq.img_background + ')'}" class="card__image">
-      <img [src]="eq.img_game" />
-    </div>
+      <div [ngStyle]="{'background-image': 'url(' + eq.img_background + ')'}" class="card__image">
+        <img [src]="eq.img_game" />
+      </div>
 
-    <div class="card__unit-name">{{ eq.name }}</div>
-  </button>
+      <div class="card__unit-name">{{ eq.name }}</div>
+    </button>
+  </ng-container>
 </div>
-    

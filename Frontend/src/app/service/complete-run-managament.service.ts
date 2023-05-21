@@ -213,6 +213,32 @@ fullCharData : any;
         return error;
       });
   }
+
+  getDeck(idPlayerCharacter: number): Promise<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + localStorage.getItem('access_token'),
+    });
+  
+    const options = {
+      headers,
+      withCredentials: true,
+    };
+  
+    return this._http.get<any>(`${this.Url}getDeck/${idPlayerCharacter}`, options)
+      .toPromise()
+      .then((response) => {
+        console.log(response);
+        return response;
+      })
+      .catch((error) => {
+        console.log(error);
+        return error;
+      });
+  }
+  
+  
+
   
 
   }

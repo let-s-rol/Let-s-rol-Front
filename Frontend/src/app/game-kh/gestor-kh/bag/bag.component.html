@@ -1,5 +1,5 @@
 <div *ngIf="inventory" class="inventory-container">
-    <h2 class="inventory-title">Inventario</h2>
+ 
     <ul class="inventory-list">
       <li *ngFor="let item of inventory" class="inventory-item" (click)="markAsDeck(item.id)">
         <span class="inventory-item-icon">

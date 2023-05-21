@@ -30,7 +30,7 @@ export class GameCardButtonComponent implements OnInit {
 
         "img_game":"../../assets/gameCards/d&d.png",
 
-        "online":"true"
+        "online":"false"
 
       } ,
       {
@@ -41,7 +41,7 @@ export class GameCardButtonComponent implements OnInit {
 
         "img_game":"../../assets/gameCards/wh40k.png",
 
-        "online":"true"
+        "online":"false"
 
       }
     ]

@@ -1,19 +1,33 @@
 .inventory-container {
-  background-color: #1f1f1f;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  max-width: 400px; /* Adjust the desired maximum width */
-  margin: 0 auto; /* Center the container horizontally */
-  margin-top: 5%;
-}
-
-.inventory-title {
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    max-width: 400px; /* Adjust the desired maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 5%;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 600px; /* Adjust the desired height for the scrollable area */
+  
+    /* Hide the scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* Thumb color, Track color */
+  }
+  
+  .inventory-container::-webkit-scrollbar {
+    width: 6px; /* Adjust the desired width */
+    background-color: transparent; /* Set the scrollbar background color to transparent */
+  }
+  
+  .inventory-container::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Set the scrollbar thumb color to transparent */
+  }
+  
+  .inventory-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
 .inventory-list {
   list-style: none;

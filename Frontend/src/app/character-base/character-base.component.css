@@ -85,6 +85,15 @@
     margin: 0;
     min-block-size: 100vh;
   }
+
+  .title {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+  }
   
   /* modules/anchor.css */
   
