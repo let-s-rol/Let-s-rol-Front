@@ -64,6 +64,12 @@
   margin-right: 5px; /* Adjust the desired spacing */
 }
 
+.inventory-item {
+  border: 2px solid transparent; /* Transparent border */
+  border-radius: 6px;
+  transition: border-width 0.2s ease-in-out; /* Transition for border width */
+}
+
 .inventory-item:hover {
     background-image: linear-gradient(to top, rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0));
     border: 2px solid #ff0000; /* Shiny red border */
