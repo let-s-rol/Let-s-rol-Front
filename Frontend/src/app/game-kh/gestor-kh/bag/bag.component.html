@@ -1,1 +1,19 @@
-<p>bag works!</p>
+<div *ngIf="inventory" class="inventory-container">
+    <h2 class="inventory-title">Inventario</h2>
+    <ul class="inventory-list">
+      <li *ngFor="let item of inventory" class="inventory-item" (click)="markAsDeck(item.name)">
+        <span class="inventory-item-icon">
+          <img *ngIf="item.card_type === 'llavespada'" src="../../../../assets/gameCards/Sword.png" alt="Llavespada Icon" class="card-icon" />
+          <img *ngIf="item.card_type === 'consumible'" src="../../../../assets/gameCards/Potion.png" alt="Consumible Icon" class="card-icon" />
+          <img *ngIf="item.card_type === 'hechizo'" src="../../../../assets/gameCards/Magic.png" alt="Hechizo Icon" class="card-icon" />
+        </span>
+        <span class="inventory-item-name">{{ item.name }}</span>
+        <span class="nivel-label">lvl</span>
+        <span class="inventory-item-card-lvl">
+          {{ item.card_lvl }}
+          <span *ngIf="item.desk_flag" class="desk-flag">E</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+  

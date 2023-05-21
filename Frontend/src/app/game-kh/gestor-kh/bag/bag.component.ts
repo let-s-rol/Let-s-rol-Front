@@ -1,4 +1,3 @@
-
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CompleteRunManagamentService } from 'src/app/service/complete-run-managament.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -12,9 +11,8 @@ import { cards } from 'src/app/inferfaces/cards';
 })
 export class BagComponent implements OnInit {
 
-  inventory!:any [];
+  inventory!: any[];
   character!: FullCharacter[];
-
 
   constructor(
     private CompleteRunManagamentService: CompleteRunManagamentService,
@@ -24,7 +22,6 @@ export class BagComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-
     this.route.params.subscribe((params) => {
       let id = Number.parseInt(params['id']);
       if (Number.isNaN(id)) {
@@ -32,7 +29,6 @@ export class BagComponent implements OnInit {
         return;
       }
 
-      //GET CON EL CONTENIDO DEL PERSONAJE COMPLETO
       console.log('ID from route params:', id);
       this.CompleteRunManagamentService.getCharacterTable(id).subscribe(
         (response: FullCharacter[]) => {
@@ -43,19 +39,20 @@ export class BagComponent implements OnInit {
             (response: any) => {
               this.inventory = response.inventory;
               console.log('Inventory:', this.inventory);
+              this.cdr.detectChanges(); // Detect changes after receiving inventory data
             },
             (error: any) => {
               console.error('Error:', error);
             }
-                  );
-
-        })}
-  
-    )};
-
-
-    
-  
+          );
+        }
+      );
+    });
   }
+
+markAsDeck(nombre:string) {
+  console.log("Apretaron " + nombre );
+}
+}
 
   
