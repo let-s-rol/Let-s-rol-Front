@@ -7,7 +7,10 @@
         <div class="center-wrap">
           <div class="section text-center">
             <h4 class="mb-4 text-light pb-3">Crear personaje</h4>
-            <select (change)="actualizarValores($event)" class="form-group form-style">
+            <select
+              (change)="actualizarValores($event)"
+              class="form-group form-style"
+            >
               <option value="">Personajes Creado</option>
               <option *ngFor="let eq of baseCharacter" [value]="eq.name">
                 {{ eq.name }}
@@ -51,10 +54,8 @@
                   [(ngModel)]="description"
                 />
               </div>
-
               <button type="submit" class="btn mt-4">Entrar</button>
             </form>
-
           </div>
         </div>
       </div>

@@ -8,9 +8,8 @@ describe('ShowCharacterInfoLeftComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ShowCharacterInfoLeftComponent ]
-    })
-    .compileComponents();
+      declarations: [ShowCharacterInfoLeftComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ShowCharacterInfoLeftComponent);
     component = fixture.componentInstance;

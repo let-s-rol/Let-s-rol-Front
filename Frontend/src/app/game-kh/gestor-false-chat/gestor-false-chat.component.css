@@ -1,60 +1,57 @@
 .chat-container {
-    position: fixed;
-    bottom: 10%;
-    left: 1%;
-    width: 15%;
-    height: 53%;
-    max-height: 60%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: 2px solid #333333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-  }
-  
-  
-  .input-text {
-    position: fixed;
-    bottom: 2%;
-    left: 5%;
-    width: 10%;
-    max-height: 5%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    border: 2px solid #333333;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-  
-  }
-  
-  .button {
+  position: fixed;
+  bottom: 10%;
+  left: 1%;
+  width: 15%;
+  height: 53%;
+  max-height: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: 2px solid #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 
-    height: 5%;
-    position: fixed;
-    min-height: 5%;
-    bottom: 2%;
-    left: 1%;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333333;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #555555;
-  }
-  
-  .message-sender {
-    font-weight: bold;
-    color: #333333;
-    margin-right: 5px;
-  }
+.input-text {
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
+  width: 10%;
+  max-height: 5%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  border: 2px solid #333333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.button {
+  height: 5%;
+  position: fixed;
+  min-height: 5%;
+  bottom: 2%;
+  left: 1%;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #555555;
+}
+
+.message-sender {
+  font-weight: bold;
+  color: #333333;
+  margin-right: 5px;
+}

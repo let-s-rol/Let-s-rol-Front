@@ -1,9 +1,6 @@
 export interface BaseCharacter {
-
-    
-    name: string;
-    race: string;
-    description: string;
-    img: string;
-
-  }
+  name: string;
+  race: string;
+  description: string;
+  img: string;
+}

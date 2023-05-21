@@ -8,9 +8,8 @@ describe('NavbarGestorKhComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavbarGestorKhComponent ]
-    })
-    .compileComponents();
+      declarations: [NavbarGestorKhComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(NavbarGestorKhComponent);
     component = fixture.componentInstance;

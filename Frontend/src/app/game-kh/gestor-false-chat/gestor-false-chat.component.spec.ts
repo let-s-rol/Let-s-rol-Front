@@ -8,9 +8,8 @@ describe('GestorFalseChatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GestorFalseChatComponent ]
-    })
-    .compileComponents();
+      declarations: [GestorFalseChatComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GestorFalseChatComponent);
     component = fixture.componentInstance;

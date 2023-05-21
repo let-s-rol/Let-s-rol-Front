@@ -8,9 +8,8 @@ describe('BagComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BagComponent ]
-    })
-    .compileComponents();
+      declarations: [BagComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BagComponent);
     component = fixture.componentInstance;

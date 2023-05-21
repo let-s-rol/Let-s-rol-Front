@@ -4,5 +4,4 @@ export interface Run {
     idGame:number,
     run_description:string;
     password : string;
-
   }

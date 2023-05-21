@@ -16,8 +16,6 @@ export class GameKhComponent implements OnInit {
 
   characterName!: string;
 
-
-
   constructor(
     private CompleteRunManagamentService: CompleteRunManagamentService,
     private router: Router,
@@ -56,5 +54,4 @@ export class GameKhComponent implements OnInit {
       );
     });
   }
-
 }

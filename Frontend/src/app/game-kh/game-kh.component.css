@@ -12,12 +12,10 @@
 }
 
 header {
-
   grid-area: header;
 }
 
 nav {
- 
   grid-area: nav;
 }
 
@@ -28,4 +26,3 @@ section {
 aside {
   grid-area: aside;
 }
-
