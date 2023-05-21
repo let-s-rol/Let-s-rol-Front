@@ -196,6 +196,23 @@ fullCharData : any;
   
     return this._http.get<any>(`${this.Url}getInventory/${idPlayerCharacter}/${idRun}`, options);
   }
+
+  markAsDeck(idCardInventory: number): Promise<any> {
+    const token = localStorage.getItem('access_token');
+    const headers = { Authorization: `Bearer ${token}` };
+
+    return this._http
+      .put(this.Url + `PutOnDeck/${idCardInventory}`, {}, { headers })
+      .toPromise()
+      .then((response) => {
+        console.log(response);
+        return response;
+      })
+      .catch((error) => {
+        console.log(error);
+        return error;
+      });
+  }
   
 
   }

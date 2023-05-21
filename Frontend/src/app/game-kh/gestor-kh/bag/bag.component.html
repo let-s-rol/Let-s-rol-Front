@@ -1,7 +1,7 @@
 <div *ngIf="inventory" class="inventory-container">
     <h2 class="inventory-title">Inventario</h2>
     <ul class="inventory-list">
-      <li *ngFor="let item of inventory" class="inventory-item" (click)="markAsDeck(item.name)">
+      <li *ngFor="let item of inventory" class="inventory-item" (click)="markAsDeck(item.id)">
         <span class="inventory-item-icon">
           <img *ngIf="item.card_type === 'llavespada'" src="../../../../assets/gameCards/Sword.png" alt="Llavespada Icon" class="card-icon" />
           <img *ngIf="item.card_type === 'consumible'" src="../../../../assets/gameCards/Potion.png" alt="Consumible Icon" class="card-icon" />

@@ -13,6 +13,7 @@ export class BagComponent implements OnInit {
 
   inventory!: any[];
   character!: FullCharacter[];
+  id!: number;
 
   constructor(
     private CompleteRunManagamentService: CompleteRunManagamentService,
@@ -23,36 +24,50 @@ export class BagComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      let id = Number.parseInt(params['id']);
-      if (Number.isNaN(id)) {
+      this.id = Number.parseInt(params['id']);
+      if (Number.isNaN(this.id)) {
         console.error('Invalid id:', params['id']);
         return;
       }
 
-      console.log('ID from route params:', id);
-      this.CompleteRunManagamentService.getCharacterTable(id).subscribe(
+      console.log('ID from route params:', this.id);
+      this.CompleteRunManagamentService.getCharacterTable(this.id).subscribe(
         (response: FullCharacter[]) => {
           this.character = response;
-          console.log('Character: ', this.character);
+          console.log('Character:', this.character);
 
-          this.CompleteRunManagamentService.getInventory(this.character[0].id_player_character, id).subscribe(
-            (response: any) => {
-              this.inventory = response.inventory;
-              console.log('Inventory:', this.inventory);
-              this.cdr.detectChanges(); // Detect changes after receiving inventory data
-            },
-            (error: any) => {
-              console.error('Error:', error);
-            }
-          );
+          this.fetchInventoryData();
+        },
+        (error: any) => {
+          console.error('Error:', error);
         }
       );
     });
   }
 
-markAsDeck(nombre:string) {
-  console.log("Apretaron " + nombre );
-}
+  fetchInventoryData(): void {
+    this.CompleteRunManagamentService.getInventory(this.character[0].id_player_character, this.id).subscribe(
+      (response: any) => {
+        this.inventory = response.inventory;
+        console.log('Inventory:', this.inventory);
+        this.cdr.detectChanges(); // Detect changes after receiving inventory data
+      },
+      (error: any) => {
+        console.error('Error:', error);
+      }
+    );
+  }
+
+  markAsDeck(idCardInventory: number): void {
+    this.CompleteRunManagamentService.markAsDeck(idCardInventory).then(() => {
+      console.log('Card marked as deck successfully');
+      // Perform any additional actions if needed
+      this.fetchInventoryData(); // Update the inventory data after marking the card as deck
+    })
+    .catch((error) => {
+      console.error('Error marking card as deck:', error);
+    });
+  }
 }
 
-  
+
