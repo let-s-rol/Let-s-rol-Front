@@ -1,29 +1,10 @@
 <div *ngIf="inventory" class="inventory-container">
   <ul class="inventory-list">
-    <li
-      *ngFor="let item of inventory"
-      class="inventory-item"
-      (click)="markAsDeck(item.id)"
-    >
+    <li *ngFor="let item of inventory" class="inventory-item" (click)="markAsDeck(item.id)" [attr.data-card-type]="item.card_type">
       <span class="inventory-item-icon">
-        <img
-          *ngIf="item.card_type === 'llavespada'"
-          src="../../../../assets/gameCards/Sword.png"
-          alt="Llavespada Icon"
-          class="card-icon"
-        />
-        <img
-          *ngIf="item.card_type === 'consumible'"
-          src="../../../../assets/gameCards/Potion.png"
-          alt="Consumible Icon"
-          class="card-icon"
-        />
-        <img
-          *ngIf="item.card_type === 'hechizo'"
-          src="../../../../assets/gameCards/Magic.png"
-          alt="Hechizo Icon"
-          class="card-icon"
-        />
+        <img *ngIf="item.card_type === 'llavespada'" src="../../../../assets/gameCards/Sword.png" alt="Llavespada Icon" class="card-icon" />
+        <img *ngIf="item.card_type === 'consumible'" src="../../../../assets/gameCards/Potion.png" alt="Consumible Icon" class="card-icon" />
+        <img *ngIf="item.card_type === 'hechizo'" src="../../../../assets/gameCards/Magic.png" alt="Hechizo Icon" class="card-icon" />
       </span>
       <span class="inventory-item-name">{{ item.name }}</span>
       <span class="nivel-label">lvl</span>

@@ -71,15 +71,27 @@
 }
 
 .inventory-item:hover {
-  background-image: linear-gradient(
-    to top,
-    rgba(255, 0, 0, 0.6),
-    rgba(255, 0, 0, 0)
-  );
-  border: 2px solid #ff0000; /* Shiny red border */
-  border-radius: 6px;
   cursor: pointer;
 }
+
+.inventory-item[data-card-type="llavespada"]:hover {
+  background-image: linear-gradient(to top, rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0));
+  border: 2px solid #ff0000; /* Shiny red border */
+}
+
+
+.inventory-item[data-card-type="consumible"]:hover {
+  background-image: linear-gradient(to top, rgba(0, 255, 0, 0.6), rgba(0, 255, 0, 0));
+  border: 2px solid #00ff00; /* Shiny green border */
+}
+
+
+.inventory-item[data-card-type="hechizo"]:hover {
+  background-image: linear-gradient(to top, rgba(0, 0, 255, 0.6), rgba(0, 0, 255, 0));
+  border: 2px solid #0000ff; /* Shiny blue border */
+}
+
+
 
 .desk-flag {
   font-size: 18px; /* Adjust the desired font size */
