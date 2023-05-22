@@ -10,7 +10,7 @@
 <div *ngIf="deck && deck.length > 0">
   <div class="deck-container">
     <div class="scrollable-content">
-      <div *ngFor="let card of deck" class="card" (click)="atacarMonstruo(card.card_type)">
+      <div *ngFor="let card of deck" class="card" (click)="atacarMonstruo(card.card_type, card.id, card.card_lvl)">
         <!-- Display card name and level -->
         <p class="card-name">{{ card.name }}</p>
         <p class="card-level">lvl: {{ card.card_lvl }}</p>

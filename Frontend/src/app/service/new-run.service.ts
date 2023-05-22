@@ -32,22 +32,17 @@ export class newRunService {
     
 
     return this._http.post(this.Url + 'games/' + gameId + '/runs', newRun, { headers } )
-      .toPromise()
-      .then(response => {
-        console.log(response);
+    .toPromise()
+    .then(response => {
+      console.log(response);
 
-        let found = false;
-        if (response != null) {
-          found = true;
-        }
-
-        this.newRunData = response;
-        return found;
-      })
-      .catch(error => {
-        console.log(error);
-        return false;
-      });
+      // Return the response object as is
+      return response;
+    })
+    .catch(error => {
+      console.log(error);
+      throw error;
+    });
       
   }
 

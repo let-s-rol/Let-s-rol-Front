@@ -34,6 +34,7 @@ import { ShopComponent } from './game-kh/gestor-kh/shop/shop.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { ShopComponent } from './game-kh/gestor-kh/shop/shop.component';
     NavbarGestorKhComponent,
     BattleComponent,
     BagComponent,
-    ShopComponent
+    ShopComponent,
+    
 
   ],
   imports: [BrowserModule, HttpClientModule ,ReactiveFormsModule, AppRoutingModule,FormsModule],

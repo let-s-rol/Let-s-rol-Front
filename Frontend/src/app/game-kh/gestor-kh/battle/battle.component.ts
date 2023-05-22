@@ -65,7 +65,21 @@ export class BattleComponent implements OnInit {
   }
 
 
-  atacarMonstruo(card_type:any) {
+  atacarMonstruo(card_type:any, id:number, lvl:number) {
+
+  
+console.log("Carta Tipo: ", card_type);
+console.log("Carta Id: ", id);
+console.log("Carta LVL: ", lvl);
+const monsterCard = Math.random();
+const index = this.deck.findIndex(deck => deck.id === id);
+
+if(index !== -1) {
+this.deck.splice(index, 1);
+}
+
+
+
 
     const enemyImage = document.querySelector('.enemy-image') as HTMLElement;
     if (enemyImage) {
@@ -75,17 +89,27 @@ export class BattleComponent implements OnInit {
       }, 200); // Adjust the duration of the animation
     }
 
-    if (card_type === "llavespada") {
+    if (card_type === "llavespada" && monsterCard < lvl) {
       const damage = this.character[0].player_str;
       const monster = this.enemies[0]; // Assuming there's only one monster
     
       monster.life -= damage;
 
-    } else if (card_type === "hechizo") {
+    } else if (card_type === "hechizo" && monsterCard < lvl) {
       const damage = this.character[0].player_mag;
       const monster = this.enemies[0]; // Assuming there's only one monster
     
       monster.life -= damage;
+
+    } else {
+
+      const enemyImageDefense = document.querySelector('.enemy-image') as HTMLElement;
+      if (enemyImageDefense) {
+        enemyImage.classList.add('glow');
+        setTimeout(() => {
+          enemyImageDefense.classList.remove('glow');
+        }, 1000); // Adjust the duration of the animation
+      }
 
     }
 

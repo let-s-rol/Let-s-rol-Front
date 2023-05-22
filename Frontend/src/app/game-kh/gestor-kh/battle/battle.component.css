@@ -125,6 +125,39 @@
     cursor: pointer;
   }
 
+  @keyframes glow-animation {
+    0% {
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+    }
+    50% {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  .glow {
+    animation-name: glow-animation;
+    animation-duration: 1s; /* Adjust the duration of the animation */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    position: relative;
+  }
+  
+  .glow::before {
+    content: "¡BLOQUEADO!";
+    position: absolute;
+    bottom: -30px; /* Adjust the position of the text */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 14px; /* Adjust the font size */
+    text-align: center;
+    width: 100%;
+  }
+  
   
   
 
