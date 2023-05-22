@@ -10,5 +10,4 @@ export interface User {
   rol: String;
   img: String;
   sex: number;
-
 }

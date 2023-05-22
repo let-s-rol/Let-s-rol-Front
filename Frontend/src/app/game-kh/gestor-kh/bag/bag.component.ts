@@ -1,16 +1,15 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CompleteRunManagamentService } from 'src/app/service/complete-run-managament.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FullCharacter } from'../../../inferfaces/fullCharacter';
+import { FullCharacter } from '../../../inferfaces/fullCharacter';
 import { cards } from 'src/app/inferfaces/cards';
 
 @Component({
   selector: 'app-bag',
   templateUrl: './bag.component.html',
-  styleUrls: ['./bag.component.css']
+  styleUrls: ['./bag.component.css'],
 })
 export class BagComponent implements OnInit {
-
   inventory!: any[];
   character!: FullCharacter[];
   id!: number;
@@ -20,7 +19,7 @@ export class BagComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
@@ -46,7 +45,10 @@ export class BagComponent implements OnInit {
   }
 
   fetchInventoryData(): void {
-    this.CompleteRunManagamentService.getInventory(this.character[0].id_player_character, this.id).subscribe(
+    this.CompleteRunManagamentService.getInventory(
+      this.character[0].id_player_character,
+      this.id
+    ).subscribe(
       (response: any) => {
         this.inventory = response.inventory;
         console.log('Inventory:', this.inventory);
@@ -59,15 +61,14 @@ export class BagComponent implements OnInit {
   }
 
   markAsDeck(idCardInventory: number): void {
-    this.CompleteRunManagamentService.markAsDeck(idCardInventory).then(() => {
-      console.log('Card marked as deck successfully');
-      // Perform any additional actions if needed
-      this.fetchInventoryData(); // Update the inventory data after marking the card as deck
-    })
-    .catch((error) => {
-      console.error('Error marking card as deck:', error);
-    });
+    this.CompleteRunManagamentService.markAsDeck(idCardInventory)
+      .then(() => {
+        console.log('Card marked as deck successfully');
+        // Perform any additional actions if needed
+        this.fetchInventoryData(); // Update the inventory data after marking the card as deck
+      })
+      .catch((error) => {
+        console.error('Error marking card as deck:', error);
+      });
   }
 }
-
-

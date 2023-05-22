@@ -36,8 +36,6 @@ export class NewCharacterPannelComponent implements OnInit {
     });
   }
 
-
-
   checkCheckbox() {
     // TODO hacer que cambie el check entre registro y login
     this.regLog = false;
@@ -49,20 +47,17 @@ export class NewCharacterPannelComponent implements OnInit {
       (response: FullCharacter[]) => {
         this.baseCharacter = response;
         console.log('Personajes Base: ', this.baseCharacter);
-        
       }
     );
   }
   actualizarValores(event: any) {
-
-console.log(event.target.value);
+    console.log(event.target.value);
 
     let seleccionado = this.baseCharacter.find(
       (opcionSeleccionada) => opcionSeleccionada === opcionSeleccionada
     );
 
     console.log(seleccionado);
-    
 
     if (seleccionado) {
       this.name = seleccionado.name;
@@ -78,21 +73,21 @@ console.log(event.target.value);
   }
 
   send(): any {
-
     let URLid: number = 0;
 
-            //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
-            this.route.params.subscribe((params) => {
-              let URLid = Number.parseInt(params['id']);
-              if (Number.isNaN(URLid)) {
-                console.error('Invalid id:', params['id']);
-                return;
-              }
-              
+    //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
+    this.route.params.subscribe((params) => {
+      let URLid = Number.parseInt(params['id']);
+      if (Number.isNaN(URLid)) {
+        console.error('Invalid id:', params['id']);
+        return;
+      }
 
-    this.CompleteRunManagamentService.addFullCharacter(this.character.value, URLid)
-    
-  });
-    
+      this.CompleteRunManagamentService.addFullCharacter(
+        this.character.value,
+        URLid
+      );
+      this.cdr.detectChanges();
+    });
   }
 }

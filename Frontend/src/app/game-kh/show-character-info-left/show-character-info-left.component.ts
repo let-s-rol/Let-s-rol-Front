@@ -1,4 +1,3 @@
-
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CompleteRunManagamentService } from 'src/app/service/complete-run-managament.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -7,11 +6,9 @@ import { FullCharacter } from '../../inferfaces/fullCharacter';
 @Component({
   selector: 'app-show-character-info-left',
   templateUrl: './show-character-info-left.component.html',
-  styleUrls: ['./show-character-info-left.component.css']
+  styleUrls: ['./show-character-info-left.component.css'],
 })
 export class ShowCharacterInfoLeftComponent implements OnInit {
-
-
   character!: FullCharacter[];
 
   constructor(
@@ -19,7 +16,7 @@ export class ShowCharacterInfoLeftComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     //GUARDA EN UNA VARIABLE LA ID DE LA RUN QUE ESTÁ EN LA URL
@@ -48,4 +45,3 @@ export class ShowCharacterInfoLeftComponent implements OnInit {
 
     
 }
-

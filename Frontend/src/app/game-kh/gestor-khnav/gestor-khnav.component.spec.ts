@@ -8,9 +8,8 @@ describe('GestorKHNavComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GestorKHNavComponent ]
-    })
-    .compileComponents();
+      declarations: [GestorKHNavComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GestorKHNavComponent);
     component = fixture.componentInstance;
