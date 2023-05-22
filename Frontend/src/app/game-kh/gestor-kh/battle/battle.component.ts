@@ -2,6 +2,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { CompleteRunManagamentService } from 'src/app/service/complete-run-managament.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FullCharacter } from 'src/app/inferfaces/fullCharacter';
+import { Renderer2 } from '@angular/core';
+
 
 @Component({
   selector: 'app-battle',
@@ -16,7 +18,9 @@ export class BattleComponent implements OnInit {
     private completeRunManagamentService: CompleteRunManagamentService,
     private router: Router,
     private route: ActivatedRoute,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private renderer: Renderer2
+
   ) {}
 
   character!: FullCharacter[];
@@ -62,6 +66,14 @@ export class BattleComponent implements OnInit {
 
 
   atacarMonstruo(card_type:any) {
+
+    const enemyImage = document.querySelector('.enemy-image') as HTMLElement;
+    if (enemyImage) {
+      enemyImage.classList.add('tremble');
+      setTimeout(() => {
+        enemyImage.classList.remove('tremble');
+      }, 200); // Adjust the duration of the animation
+    }
 
     if (card_type === "llavespada") {
       const damage = this.character[0].player_str;

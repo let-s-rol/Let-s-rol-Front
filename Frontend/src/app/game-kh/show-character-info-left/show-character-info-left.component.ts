@@ -3,6 +3,7 @@ import { CompleteRunManagamentService } from 'src/app/service/complete-run-manag
 import { ActivatedRoute, Router } from '@angular/router';
 import { FullCharacter } from '../../inferfaces/fullCharacter';
 
+
 @Component({
   selector: 'app-show-character-info-left',
   templateUrl: './show-character-info-left.component.html',
@@ -15,7 +16,7 @@ export class ShowCharacterInfoLeftComponent implements OnInit {
     private CompleteRunManagamentService: CompleteRunManagamentService,
     private router: Router,
     private route: ActivatedRoute,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {
