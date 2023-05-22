@@ -18,6 +18,7 @@ fullCharData : any;
   constructor(private _http: HttpClient) { }
 
   URLid!: number;
+  monsterDamage!: number;
   // character!: FullCharacter;
 
   compraDatos: any;
@@ -238,7 +239,20 @@ fullCharData : any;
   }
   
   
+    reduceCharacterLife(monsterDamage:number) {
 
+      console.log(monsterDamage);
+      this.monsterDamage = monsterDamage;
+
+
+  }
+
+  returnDamage() {
+
+    return this.monsterDamage;
+    
+
+  }
   
 
   }

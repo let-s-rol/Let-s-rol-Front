@@ -1,29 +1,39 @@
 <div class="enemy-container">
-    <div *ngFor="let enemy of enemies" class="enemy-card">
-      <img [src]="enemy.imagePath" alt="Enemy" class="enemy-image">
-      <h3 class="enemy-name">{{ enemy.name }}</h3>
-      
+  <div *ngFor="let enemy of enemies" class="enemy-card">
+    <div *ngIf="enemy.life > 1">
+      <img [src]="enemy.imagePath" alt="Enemy" class="enemy-image" />
+      <h3 class="enemy-name" style="color: #8adc8a">{{ enemy.life }}</h3>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="deck && deck.length > 0">
+  <div class="deck-container">
+    <div class="scrollable-content">
+      <div *ngFor="let card of deck" class="card" (click)="atacarMonstruo(card.card_type)">
+        <!-- Display card name and level -->
+        <p class="card-name">{{ card.name }}</p>
+        <p class="card-level">lvl: {{ card.card_lvl }}</p>
+        <!-- Display card image based on card_type -->
+        <img
+          *ngIf="card.card_type === 'llavespada'"
+          src="../../../../assets/gameCards/Sword.png"
+          alt="Llavespada Icon"
+          class="card-icon"
+        />
+        <img
+          *ngIf="card.card_type === 'consumible'"
+          src="../../../../assets/gameCards/Potion.png"
+          alt="Consumible Icon"
+          class="card-icon"
+        />
+        <img
+          *ngIf="card.card_type === 'hechizo'"
+          src="../../../../assets/gameCards/Magic.png"
+          alt="Hechizo Icon"
+          class="card-icon"
+        />
       </div>
     </div>
-
-    <div *ngIf="deck && deck.length > 0">
-        <div class="deck-container">
-          <div class="scrollable-content">
-            <div *ngFor="let card of deck" class="card">
-              <!-- Display card name and level -->
-              <p class="card-name">{{ card.name }}</p>
-              <p class="card-level">lvl: {{ card.card_lvl }}</p>
-              <!-- Display card image based on card_type -->
-              <img *ngIf="card.card_type === 'llavespada'" src="../../../../assets/gameCards/Sword.png" alt="Llavespada Icon" class="card-icon" />
-              <img *ngIf="card.card_type === 'consumible'" src="../../../../assets/gameCards/Potion.png" alt="Consumible Icon" class="card-icon" />
-              <img *ngIf="card.card_type === 'hechizo'" src="../../../../assets/gameCards/Magic.png" alt="Hechizo Icon" class="card-icon" />
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-      
-      
-      
-  
+  </div>
+</div>

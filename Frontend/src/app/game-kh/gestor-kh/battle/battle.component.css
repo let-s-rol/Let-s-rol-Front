@@ -89,6 +89,11 @@
     font-size: 16px; /* Adjust the desired font size */
     font-weight: bold;
   }
+
+  .card {
+    border: 2px solid transparent; /* Transparent border by default */
+    transition: border-width 0.2s; /* Smooth transition for border width */
+  }
   
   .card:hover {
     background-image: linear-gradient(to top, rgba(52, 12, 255, 0.691), rgba(255, 0, 0, 0));
@@ -99,6 +104,5 @@
 
   
   
-  
-  /* Add additional styles as needed */
+
   

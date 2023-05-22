@@ -26,14 +26,7 @@ export class BattleComponent implements OnInit {
     name: "Sombra",
     imagePath: "../../../../assets/gameCards/Shadow_Card.png",
     // Add more properties as needed
-    life: 50,
-    strength: 5,
-    agility: 3
-  },
-  {
-    name: "Sombra 2",
-    imagePath: "../../../../assets/gameCards/Shadow_Card.png",
-    life: 50,
+    life: 30,
     strength: 5,
     agility: 3
   },
@@ -65,7 +58,34 @@ export class BattleComponent implements OnInit {
         }
       });
     });
+  }
+
+
+  atacarMonstruo(card_type:any) {
+
+    if (card_type === "llavespada") {
+      const damage = this.character[0].player_str;
+      const monster = this.enemies[0]; // Assuming there's only one monster
+    
+      monster.life -= damage;
+
+    } else if (card_type === "hechizo") {
+      const damage = this.character[0].player_mag;
+      const monster = this.enemies[0]; // Assuming there's only one monster
+    
+      monster.life -= damage;
+
+    }
+
+    const damageMonster = this.enemies[0].strength;
+    //const charcaterLife = this.character[0].player_hp; // Assuming there's only one monster
+  
+   this.completeRunManagamentService.reduceCharacterLife(damageMonster);
 
     
+
   }
+  
+
+
 }

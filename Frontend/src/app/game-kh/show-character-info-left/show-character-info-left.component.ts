@@ -37,9 +37,15 @@ export class ShowCharacterInfoLeftComponent implements OnInit {
           this.character = response;
           console.log('Character: ', this.character);
 
+
+         
+
         })}
   
+        
     )};
+
+
     
 }
 
